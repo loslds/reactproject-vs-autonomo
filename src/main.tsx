@@ -1,29 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
 
 
 
 import App from './App.tsx';
 import Erropg from './pages/Erropg.tsx';
-import Loginoffpg from './pages/Loginoffpg.tsx';
-import Homepg from './pages/Homepg.tsx';
+import { Loginpg1 } from './pages/Loginpg1';
+import { Loginpg2 } from './pages/Loginpg2';
+import { Loginpg3 } from './pages/Loginpg3';
+
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-const router = createBrowserRouter([
+
+export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     errorElement: <Erropg />,
     children: [
-      {
-        path: "/",
-        element: <Loginoffpg />
-      },
-      {
-        path: "/homepg",
-        element: <Homepg />
-      },
+      { path: "/", element: <Loginpg1 /> },
+      { path: "/loginpg2", element: <Loginpg2 /> },
+      { path: "/loginpg3", element: <Loginpg3 /> }
     ]
   }
 ]);
