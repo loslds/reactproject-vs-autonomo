@@ -112,7 +112,12 @@ export enum AcessoActions {
   setDtFim,
   setTmp
 }
-
+// Context
+type AcessoContextType = {
+  state: StateAcesso;
+  dispatch: (action: AcessoAction) => void;
+};
+const AcessoContext = React.createContext<AcessoContextType | undefined>(undefined);
 
 type AcessoAction = {
   type: AcessoActions;
@@ -192,25 +197,11 @@ const AcessoReducer = (state:StateAcesso, action:AcessoAction) => {
 
   }
 }
-// o Context, Reducer, Provider, Hook
-
-// Context
-
-
-
-type AcessoContextType = {
-  state: StateAcesso;
-  dispatch: (action: AcessoAction) => void;
-};
-const AcessoContext = React.createContext<AcessoContextType | undefined>(undefined);
-
 // Provider
-
 type AcessoProviderProps = {
   children: React.ReactNode;
 };
 export const AcessoProvider = ( { children }: AcessoProviderProps ) => {
-
   const [state, dispatch] = React.useReducer(AcessoReducer, initialDataAcesso);
   const value = {state, dispatch};
   return (
@@ -220,9 +211,7 @@ export const AcessoProvider = ( { children }: AcessoProviderProps ) => {
   );
 }
 
-
 // Context Hook
-
 export const AcessoUseForm = () => {
   const context = React.useContext(AcessoContext);
   if (context === undefined) {
@@ -230,7 +219,5 @@ export const AcessoUseForm = () => {
   }
   return context;
 }
-
-
 
 export default AcessoContext;
