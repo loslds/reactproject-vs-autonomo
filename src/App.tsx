@@ -1,3 +1,11 @@
+import * as A from "./styles/styledApp";
+
+function App() {
+  return <A.ContainerAppMain />;
+}
+
+export default App;
+
 // import { AcessoProvider } from './components/contexts/AcessoContext.tsx';
 // import { RouterProvider } from 'react-router-dom';
 // import { Router } from './Router';
@@ -12,19 +20,9 @@
 
 // export default App
 
-import "./index.css";
-
+//import "./index.css";
+//import "./App.css";
 //import { Outlet } from "react-router-dom";
-
-function App() {
-  return (
-    <>
-      <div>oi</div>
-    </>
-  );
-}
-
-export default App;
 
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';

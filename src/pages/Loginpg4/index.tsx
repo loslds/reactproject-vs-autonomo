@@ -1,9 +1,10 @@
-import * as L from './styles';
+import * as L from "./styles";
+import { ThemeLogo } from "../../components/themes";
 
 export const Loginpg4 = () => {
-    return (
-        <L.Container>
-         Loginpg4
-        </L.Container>
-    );
+  return (
+    <ThemeLogo>
+      <L.Container>Loginpg4</L.Container>
+    </ThemeLogo>
+  );
 };
