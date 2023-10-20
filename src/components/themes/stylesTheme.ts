@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+
+export const DivTeste = styled.div<{ bg_color?: string; bd_color?: string }>`
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  border: 2px solid;
+  border-color: ${props => (props.bd_color ? 'bd_color' : '#fff')};;
+  background-color: ${props => (props.bg_color ? 'bg_color' : 'transparent')};
+`;
 // o mesmo que ContainerLogo
 export const ContainerLogoMain = styled.div`
   border: none;
@@ -10,10 +21,12 @@ export const ContainerLogoMain = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   background-color: #2b2bf7;
   color: #fff;
   h1 {
-    margin: 0 0 0 10px;
+    margin: 0 0 0 5px;
     padding: 0;
     font-size: 28px;
   }
