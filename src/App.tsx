@@ -13,12 +13,13 @@
 // export default App
 
 import "./index.css";
-import { Outlet } from "react-router-dom";
+
+//import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Outlet />{" "}
+      <div>oi</div>
     </>
   );
 }

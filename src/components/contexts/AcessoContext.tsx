@@ -39,7 +39,7 @@ type StateAcesso = {
 }
 
 export const initialDataAcesso: StateAcesso = {
-  correntStep: 0,
+  correntStep: 0 | 1 | 2 | 3 | 4,
   idacesso: 0,
   idemp: 0,
   nmfant: '',

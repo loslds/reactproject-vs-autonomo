@@ -13,16 +13,11 @@
 
 
 
-
-
-
-
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { AcessoProvider } from './components/contexts/AcessoContext.tsx';
-import App from './App.tsx';
+//import App from './App.tsx';
 import Erropg from './pages/Erropg.tsx';
 import { Loginpg1 } from './pages/Loginpg1';
 import { Loginpg2 } from './pages/Loginpg2';
@@ -34,7 +29,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Loginpg1 />,
     errorElement: <Erropg />,
     children: [
       { path: "/", element: <Loginpg1 /> },

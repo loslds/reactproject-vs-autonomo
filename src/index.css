@@ -25,14 +25,14 @@ a:hover {
 
 body {
   margin: 0;
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
   flex: 1;
   place-items: center;
-  width: 100%;
-  min-height: 100vh;
 }
 
 h1 {
