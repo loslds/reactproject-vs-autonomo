@@ -90,15 +90,15 @@ export const ContainerLogoStep = styled.div`
 `;
 ////////////////////////////////////////////////
 export const StepLogo = styled.div`
-  width: 100%;
+  width: 150%;
   display: flex;
 `;
 ////////////////////////////////////////////////
 // o mesmo que SidebarLogo
 export const ContainerLogoSidebar = styled.div`
-  width: 100%;
-  width: 250px;
-  border-right: 3px solid #16195C;
+  
+  width: 200px;
+  border-right: 3px solid #7f7fbb;
 `;
 ////////////////////////////////////////////////
 export const SidebarLogo = styled.div`

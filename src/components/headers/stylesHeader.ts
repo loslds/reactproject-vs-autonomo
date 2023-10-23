@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import semimg from '../../assets/svgs/semimg.svg';
 
+
 export const DivHeardLogo = styled.div<{bd_color?: string }>`
-  margin: 0px 0px 0px 0px;
-  padding: 0px 15px 5px 5px;
-  min-height: 55px;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 15px 0px 5px;
+  min-height: 50px;
 
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +14,7 @@ export const DivHeardLogo = styled.div<{bd_color?: string }>`
   align-content: center;
   border-radius: 5px;
   border: 1px solid;
-  border-color: transparent;
+  border-color: white;
   //background-color: transparent;
   &:hover {
     border: 2px solid;
@@ -44,14 +45,57 @@ export const ContainerLogoSys = styled.div<PropsImgSys>`
   align-items: center;
   align-content: center;
 `;
+//////////////////////////////////////////////
 
+export const BarContainerHRigth = styled.div`
+  /* border: 1px blueviolet solid; */
+  border: none;
+  padding: 0px 0px 0px 0px;
+  margin: 3px 0px 3px 0px;
+  background: transparent;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: right;
+  align-items: center;
+  align-content: center;
+  label {
+    padding: 0px 0px 0px 0px;
+    margin: 3px 0px 3px 0px;
+    font-style: normal;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+`;
+export const ButtonHLogin = styled.button<{ img?: string }>`
+  border: 0px;
+  padding: 1px 1px 1px 1px;
+  margin: 0px 5px 0px 5px;
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Courier New', 'Courier', 'monospace';
+  background: transparent;
+  background-color: transparent;
+  background-image: url(${({ img }) => img || semimg});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  outline: none;
+  min-height: 45px;
+  width: 50px;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: center;
+  align-items: center;
+`;
 
 
 
 
 export const ContainerHLogo = styled.div`
   padding: 0 0 0 0;
-  border-bottom: 3px solid #16195C;
+  //border-bottom: 3px solid #16195C;
   h1 {
     margin: 0px 10px 0px 10px;
     padding: 0;
@@ -65,10 +109,10 @@ export const ContainerHLogo = styled.div`
  `;
 
 export const ContainerHPanelMain = styled.div`
-  border-bottom: 3px solid #16195C;
+  //border-bottom: 3px solid #16195C;
   top: 0px;
   margin: 0px 0px 0px 0px;
-  padding: 15px 0px 0px 0px;
+  padding: 15px 0px 10px 0px;
   min-height: 50px;
   display: flex;
   flex-wrap: wrap;
