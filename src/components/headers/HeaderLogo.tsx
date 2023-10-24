@@ -5,7 +5,7 @@ import LogoSys from "../../assets/pngs/logosys.png";
 // import ButtonHeaderLogin from "./BareaderLogin";
 import ContainerHeaderMain from "./ContainerHeaderMain";
 import ContainerItensHeaderMain from "./ContainerItensMain";
-import BarHeaderLogin from './BarHearderLogin';
+import BarHeaderLogin from "./BarHearderLogin";
 
 // export const HeaderLogo = (onoff: boolean) => {
 type PropsHeader = {

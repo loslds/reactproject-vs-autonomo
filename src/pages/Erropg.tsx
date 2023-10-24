@@ -1,4 +1,4 @@
-import * as L from '../layouts/styleslayout';
+import * as L from '../components/layouts/styleslayout';
 
 export const Erropg = () => {
   return (
