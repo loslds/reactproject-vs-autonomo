@@ -5,6 +5,10 @@ export const Loginpg = () => {
   return (
     <ThemeLogo>
       <L.Container>
+        <L.ContainerMenuPage>
+          <h2>menu page</h2>
+        </L.ContainerMenuPage>
+        <L.DivisionHPanel />
         <h2>Bem Vindo...</h2>
         <p>
           {"   "}&emsp;&emsp;Se você não conhece o que temos para lhe

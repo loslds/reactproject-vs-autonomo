@@ -8,7 +8,9 @@ import * as H from "./stylesHeader";
 
 import PageModal from "../modal/PageModal";
 import CardTxtQuemSouUser from "../modalhelp/CardTxtQuemSouUser";
-import { useNavigate } from "react-router-dom";
+import CardAcessoSistema from "../modalhelp/CardAcessoSistema";
+
+// import { useNavigate } from "react-router-dom";
 
 type PropsBarHLogin = {
   logado?: boolean;
@@ -16,14 +18,16 @@ type PropsBarHLogin = {
   onclick?: () => void;
 };
 const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
-  const navigate = useNavigate();
-  const goto = (path: string) => {
-    return () => {
-      navigate(path);
-    };
-  };
+  // const navigate = useNavigate();
+  // const goto = (path: string) => {
+  //   return () => {
+  //     navigate(path);
+  //   };
+  // };
   const quemsou = "";
   const [ismodalqsou, setIsModalQSou] = React.useState(false);
+  const [ismodalnotlogin, setIsModalNotLogin] = React.useState(false);
+
   return (
     <H.BarContainerHRigth>
       <label>Login...: </label>
@@ -39,8 +43,7 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
         <H.ButtonHLogin
           img={loginoff}
           title={"Click para Logar..."}
-          onClick={goto("/loginpg1")}
-        />
+          onClick={ () => { setIsModalNotLogin(true)}}/>
       )}
       {ismodalqsou ? (
         <PageModal
@@ -53,7 +56,19 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
         >
           <CardTxtQuemSouUser img={avatar} />
         </PageModal>
-      ) : null}
+      ) : null }
+      {ismodalnotlogin ? (
+        <PageModal
+          ispx={true}
+          ptop={'25%'}
+          pwidth={'50%'}
+          pheight={'50%'}
+          titulo={'Acesso ao Sistema.'}
+          onClose={() => setIsModalNotLogin(false)}
+        >
+          <CardAcessoSistema />
+        </PageModal>
+      ): null}
     </H.BarContainerHRigth>
   );
 };

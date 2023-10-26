@@ -6,16 +6,15 @@ export const DivHeardLogo = styled.div<{bd_color?: string }>`
   margin: 0px 0px 10px 0px;
   padding: 0px 15px 0px 5px;
   min-height: 50px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   border-radius: 5px;
-  border: 1px solid;
+  border: 2px solid;
   border-color: white;
-  //background-color: transparent;
+  background-color: transparent;
   &:hover {
     border: 2px solid;
     border-color: ${props => (props.bd_color ? 'bd_color' : 'transparent')};

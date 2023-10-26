@@ -4,7 +4,7 @@ type PropsHeader = {
   children?: React.ReactNode | JSX.Element;
 };
 
-const ContainerHeaderMain: React.FC<PropsHeader> = ({ children }) => {
+const ContainerHeaderMain= ({ children }: PropsHeader) => {
   return <H.ContainerHPanelMain>{children}</H.ContainerHPanelMain>;
 };
 

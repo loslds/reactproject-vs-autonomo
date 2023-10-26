@@ -15,7 +15,6 @@ export const Content = styled.div`
   top: 0px;
   left: 0px;
   z-index: 1000;
-  color: white;
   background-color: rgba(0,0,0,0.2);
   display: flex;
   justify-content: center;
@@ -23,13 +22,15 @@ export const Content = styled.div`
   font-size: 12px;
   font-weight: normal;
   font-family: 'Courier New', Courier, monospace;
+  color: #000;
   h1,
   h2,
   h3,
   h4 {
-    margin: 2px 2px 2px 2px;
+    margin: 2px 2px 2px 4px;
     padding: 2px 2px 2px 2px;
-    text-decoration-color: #727272;
+    font-style: normal;
+    text-decoration-color: #fff;
   }
   h1 {
     text-decoration: 3px underline;
@@ -47,6 +48,9 @@ export const Content = styled.div`
     list-style-type: none;
     margin-left: 15px;
   }
+  p {
+    color: #000;
+  }
 `;
 
 type PropsMain = {
@@ -60,7 +64,7 @@ export const ContainerModal = styled.div<PropsMain>`
   border: 2px #727272 solid;
   padding: 0px 0px 0px 0px;
   margin: 0px 10px 0px 10px;
-  color: black;
+  color: #000;
   top: ${({ ptop }) => ptop || '62px'};
   position: fixed;
   width: ${({ pwidth }) => pwidth || '66.3%'};

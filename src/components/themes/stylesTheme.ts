@@ -15,28 +15,62 @@ export const DivTeste = styled.div<{ bg_color?: string; bd_color?: string }>`
 export const ContainerLogoMain = styled.div`
   border: none;
   top: 0px;
+  left: 0px;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
+  height: 98vh;
   min-width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  //align-content: center;
   background-color: #2b2bf7;
   color: #fff;
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 5px 2px 0px 2px;
+    padding: 0px 2px 0px 2px;
+    line-height: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    background-color: #b8b8d4;
+  }
   h1 {
-    margin: 0 0 0 5px;
-    padding: 0;
     font-size: 28px;
   }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
   p {
-    margin: 0 0 0 20px;
+    margin: 0px 5px 0px 5px;
+    padding: 0px 2px 0px 2px;
+    color: #000;
+    font-size: 14px;
+  }
+  li {
+    list-style-type: none;
+    margin-left: 15px;
+  }
+  p {
+    margin: 0px 5px 0px 5px;
     font-size: 14px;
     color: #b8b8d4;
   }
 `;
 //////////////////////////////////////////////////////
+// contente da Area do theme
 export const ContainerLogo = styled.div`
   background-color: #02044A;
   color: #fff;
@@ -45,78 +79,54 @@ export const ContainerLogo = styled.div`
   display: flex;
  `;
 //////////////////////////////////////////////////////
-// dive de divisão de painel
-
+// div de divisão de painel do theme
 export const DivisionHPanel = styled.div`
   border: 0px;
   padding: 1px 1px 1px 1px;
   margin: 1px 1px 1px 1px;
   height: 1px;
-  width: 100%;
+  width: 99%;
   display: flex;
   background-color: #7f7fbb;
 `;
-
-// o mesmo que Container Area
-/** quota da flexão do corpo  sem Borda */
+//////////////////////////////////////
+// content da flexao da Area do theme
 export const ContainerLogoMainFlex = styled.div`
-  border: 0px;
-  margin: 0px 5px 0px 5px;
-  padding: 0px 5px 0px 5px;
-  width: 80%;
+  border: none; /* 1px dashed #ff0000; */
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  top: 0px;
+  max-width: 80%;
   display: flex;
-  flex-direction: column;
-
-  /* align-items: center;
-  justify-content: center;
+  //flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: column;
+  //align-items: center;
+  justify-content: space-between;
   align-content: center;
-  background-color: transparent; */
 `;
-////////////////////////////////////////////////
-export const AreaLogo = styled.div`
-  margin: 0;
-  min-height: 100%;
-  max-width: 980px;
-  display: flex;
-  flex-direction: column;
-`;
-////////////////////////////////////////////////
+////////////////////////////////////////
 // o mesmo que Container Step
-export const ContainerLogoStep = styled.div`
-  border: 1px dashed #2bda0c;
-  margin: 0px 5px 0px 5px;
-  padding: 0px 5px 0px 5px;
+export const ContainerMenuPage = styled.div`
+  border: 1px dashed #fff;
+  margin: 0px 0px 0px 2px;
+  padding: 0px 0px 0px 0px;
+  max-width: 99%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
 `;
 ////////////////////////////////////////////////
-export const StepLogo = styled.div`
-  width: 150%;
+// Container da Area para Pagina no Theme
+export const ContainerPage = styled.div`
+  border: 1px dashed #fff;
+  margin: 0px 0px 0px 2px;
+  padding: 0px 0px 0px 0px;
+  max-width: 99%;
   display: flex;
-`;
-////////////////////////////////////////////////
-// o mesmo que SidebarLogo
-export const ContainerLogoSidebar = styled.div`
-  
-  width: 200px;
-  border-right: 3px solid #7f7fbb;
-`;
-////////////////////////////////////////////////
-export const SidebarLogo = styled.div`
-  width: 250px;
-  border-right: 3px solid #16195C;
-`;
-////////////////////////////////////////////////
-// o mesmo que PageLogo
-export const ContainerLogoPage = styled.div`
-  flex: 1;
-  padding-left: 40px;
-  padding-top: 40px;
-`;
-
-////////////////////////////////////////////////
-export const PageLogo = styled.div`
-  flex: 1;
-  padding-left: 40px;
-  padding-top: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
 `;
 ////////////////////////////////////////////////

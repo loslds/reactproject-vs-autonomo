@@ -2,7 +2,7 @@ import * as M from "../modal/stylesModal";
 
 import CardModalTexto from "../modal/CardModalTexto";
 
-import clientes from "../assets/svgs/clientes.svg";
+import clientes from "../../assets/svgs/clientes.svg";
 
 const CardAcessoSistema = () => {
   return (
@@ -17,46 +17,32 @@ const CardAcessoSistema = () => {
           />
         </M.ContainerHeardModalMain>
         <label>Acesso para todos que estiverem Cadastrados.</label>
-        <h5>1º Passo.</h5>
+        <h5>Atenção:</h5>
         <p>
-          {" "}
-          Para acessar o sistema devemos estar cadastrados conforme o Setor e a
-          herarquia de seu Trabalho.
+          &emsp;Para acessar, devemos estar cadastrados conforme o Setor e a
+          herarquia do acesso liberado a você. Para logar e obter acesso, crie
+          uma conta, ou entre em contato com a Administração.&emsp;Receberá uma
+          senha de acesso conforme sua Identidade, e o seu "ACESSO" ao sistema.
+          &emsp;Diante da eventual "ACESSO", será definida a Forma de Acesso,
+          com opção para: Empresa, Email, Celular.
         </p>
         <p>
-          {" "}
-          Para que possa logar e obter acesso, entre em contato com a
-          Administração.
+          &emsp;Caso crie uma conta, deverá ter um dos acesso da Opção para
+          poder ser usado como checar sua Pessoa.(medida de Segurança).
         </p>
         <p>
-          {" "}
-          Receberá uma senha de acesso conforme sua Identidade, e o seu
-          trabalho.
+          &emsp;Caso use use Email recebera um comunicado determinando a sua
+          "Senha" que terá a duração de 24hs. para que voçê altere.
         </p>
-        <p> Somente após isso feito poderá realizar o Login.</p>
-        <h5>2º Passo.</h5>
         <p>
-          {" "}
-          Selecione a Impresa usando as opções que aparece no alto ao centro,
-          clicando em "Opções."
+          &emsp;Caso use Celular recebera um SMS determinando a sua "Senha" que
+          terá a duração de 24hs. para que voçê altere. &emsp;Ao adentrar com o
+          acesso recebido, devera conter os dados: C.P.F, chave Login, chave
+          PIN. Com o qual deverá ser usado na recuperação caso esqueça seu
+          acesso.
         </p>
-        <h5>3º Passo.</h5>
         <p>
-          {" "}
-          Determine o seu ID ("Nome") ao qual voce estará sendo Representado ao
-          Sistema.
-        </p>
-        <h5>4º Passo.</h5>
-        <p>
-          {" "}
-          Determine o sua Chave ("Senha") a qual voce tambem determinou durante
-          o seu cadastramento.
-        </p>
-        <p> Logo irá aparecer um Botão ao lado direito.</p>
-        <h5>e 5º Passo.</h5>
-        <p>
-          {" "}
-          Assim que for detectado sua Chave de Acesso, O Sistema irá
+          Assim que for detectado sua Chave de Acesso, o Sistema irá
           redirecionar voce para o Setor do qual vc faz parte.
         </p>
       </M.ContentTextoModulos>
