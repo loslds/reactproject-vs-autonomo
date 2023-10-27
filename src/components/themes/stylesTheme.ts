@@ -18,8 +18,8 @@ export const ContainerLogoMain = styled.div`
   left: 0px;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
-  height: 98vh;
-  min-width: 100%;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -31,12 +31,12 @@ export const ContainerLogoMain = styled.div`
   h2,
   h3,
   h4 {
-    margin: 5px 2px 0px 2px;
+    margin: 5px 2px 0px 10px;
     padding: 0px 2px 0px 2px;
     line-height: normal;
     font-size: 16px;
     line-height: 1.2;
-    background-color: #b8b8d4;
+    background-color: transparent;
   }
   h1 {
     font-size: 28px;

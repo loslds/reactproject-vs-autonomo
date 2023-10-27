@@ -1,7 +1,8 @@
-import * as L from './stylesTheme';
-import HeaderLogo from '../headers/HeaderLogo';
-import BarSideMenu from '../sidebar/BarSideMenu';
-//import * as P from "../../panels/stylePanel";
+import * as L from "./stylesTheme";
+import HeaderLogo from "../headers/HeaderLogo";
+import BarSideMenu from "../sidebar/BarSideMenuLogin";
+import FootLogin from "../../footers/FootLogin";
+
 type PropsThemeLogo = {
   children: React.ReactNode;
 };
@@ -11,13 +12,11 @@ export const ThemeLogo = ({ children }: PropsThemeLogo) => {
       <L.ContainerLogoMainFlex>
         <HeaderLogo loginonoff={false} />
         <L.DivisionHPanel />
-        <BarSideMenu loginonoff={true} />
+        <BarSideMenu /> {/* loginonoff={true} /> */}
         <L.DivisionHPanel />
-        <L.ContainerPage>
-          {children}
-        </L.ContainerPage>
+        <L.ContainerPage>{children}</L.ContainerPage>
         <L.DivisionHPanel />
-        <h3>footer</h3>
+        <FootLogin />
       </L.ContainerLogoMainFlex>
     </L.ContainerLogoMain>
 

@@ -38,6 +38,7 @@ const PageModal = ({
         ptop={ptop}
         pwidth={pwidth}
         pheight={pheight}
+        
       >
         <CardModal>
           <TitleModal titulo={titulo} />

@@ -8,58 +8,48 @@ import acabamento from "../../assets/pngs/acabamento.png";
 import expedicao from "../../assets/pngs/expedicao.png";
 import administracao from "../../assets/pngs/administra.png";
 import master from "../../assets/pngs/master.png";
-import { useNavigate } from "react-router-dom";
-
 import config from "../../assets/pngs/config.png";
 
 import ContainerBarSideMain from "./ContainerBarSideMain";
 import ButtonSideBar from "./ButtonSideBar";
 import ContainerItensMenu from "./ContainerItensMenu";
 import React from "react";
-import CardAcessoSistema from "../modalhelp/CardAcessoSistema";
+
+import CardMdRecep from "../modalhelp/CardMdRecep";
 import PageModal from "../modal/PageModal";
 
-type PropsHeader = {
-  loginonoff?: boolean;
-};
-const BarSideMenu = ({ loginonoff }: PropsHeader) => {
-  const navigate = useNavigate();
+// type PropsHeader = {
+//   loginonoff?: boolean;
+// };
+const BarSideMenuLogin = () => {
+  const [isitensmenu, setIsItensMenu] = React.useState(false);
+  const [ismdrecep, setIsMdRecep] = React.useState(false);
 
-  const goto = (path: string) => {
-    return () => {
-      navigate(path);
-    };
-  };
-
-  const [ismodalnotlogin, setIsModalNotLogin] = React.useState(false);
+  const handlerClickItensMenu = React.useCallback(() => {
+    setIsItensMenu((oldState) => !oldState);
+  }, []);
 
   return (
     <ContainerBarSideMain>
       <S.ContainerButtonSRigth>
-        <ButtonSideBar img={menu} titbtn={"Menu..."} onClick={() => {}} />
+        <ButtonSideBar
+          img={menu}
+          titbtn={"Menu..."}
+          onClick={handlerClickItensMenu}
+        />
       </S.ContainerButtonSRigth>
-      <ContainerItensMenu>
-        {!loginonoff ? (
-          <ButtonSideBar
-            img={servicos}
-            titbtn="Recepção..."
-            onClick={() => {
-              setIsModalNotLogin(true);
-            }}
-          />
-        ) : (
-          <ButtonSideBar
-            img={servicos}
-            titbtn="Recepção..."
-            onClick={() => {
-              goto("/recepcappg");
-            }}
-          />
-        )}
+      <ContainerItensMenu onoff={isitensmenu}>
+        <ButtonSideBar
+          img={servicos}
+          titbtn="Recepção..."
+          onClick={() => {
+            setIsMdRecep(true);
+          }}
+        />
         <ButtonSideBar
           img={design}
           titbtn="Design..."
-          onClick={() => alert("cliquei Design" + loginonoff)}
+          onClick={() => alert("cliquei Design")}
         />
         <ButtonSideBar
           img={producao}
@@ -92,20 +82,20 @@ const BarSideMenu = ({ loginonoff }: PropsHeader) => {
           onClick={() => alert("cliquei Config")}
         />
       </ContainerItensMenu>
-      {!ismodalnotlogin ? (
+      {ismdrecep ? (
         <PageModal
           ispx={true}
           ptop={"25%"}
           pwidth={"50%"}
           pheight={"50%"}
-          titulo={"Acesso ao Sistema."}
-          onClose={() => setIsModalNotLogin(false)}
+          titulo={'Recepção.'}
+          onClose={() => setIsMdRecep(false)}
         >
-          <CardAcessoSistema />
+          <CardMdRecep />
         </PageModal>
-      ) : null}
+    ) : null}
     </ContainerBarSideMain>
   );
 };
 
-export default BarSideMenu;
+export default BarSideMenuLogin;

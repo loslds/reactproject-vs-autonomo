@@ -16,6 +16,7 @@ const CardMdRecep = () => {
             img={servicos}
           />
         </M.ContainerHeardModalMain>
+        <label>Sintese:</label>
         <label>Acesso ao Modulo " R E C E P Ç Ã O ".</label>
       </M.ContentTextoModulos>
     </CardModalTexto>

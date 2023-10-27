@@ -24,6 +24,7 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
   //     navigate(path);
   //   };
   // };
+  
   const quemsou = "";
   const [ismodalqsou, setIsModalQSou] = React.useState(false);
   const [ismodalnotlogin, setIsModalNotLogin] = React.useState(false);

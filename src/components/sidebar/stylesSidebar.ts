@@ -13,6 +13,7 @@ export const ContainerSPanelMain = styled.div`
   align-content: center;
   justify-content: space-between;
 `;
+//container Butto Side lado direito
 
 export const ContainerButtonSRigth = styled.div`
   border: 2px solid;
@@ -30,14 +31,31 @@ export const ContainerButtonSRigth = styled.div`
   &:hover {
     background-color: #e4e4e4;
   }
-  label {
+  /* label {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     font-style: normal;
     font-family: Verdana, Tahoma, sans-serif;
     font-weight: bold;
-  }
+  } */
 `;
+//container Butto Side lado direito
+type PropsItensModulo = {
+  open?: boolean;
+};
+export const ContainerItensModulo = styled.div<PropsItensModulo>`
+  border: none; /* solid red;*/
+  padding: 0px 0px 0px 0px;
+  margin: 2px 5px 2px 5px;
+  background: transparent;
+  max-height: fit-content;
+  display: ${props => (props.open ? 'flex' : 'none')};
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+`;
+
 
 
 // ContainerSideButton
@@ -115,21 +133,6 @@ export const ButtonSideBarImg = styled.button<{ img?: string }>`
 
 
 
-type PropsItensModulo = {
-  logoonoff?: boolean;
-};
-export const ContainerItensModulo = styled.div<PropsItensModulo>`
-  border: none; /* solid red;*/
-  padding: 0px 0px 0px 0px;
-  margin: 2px 5px 2px 5px;
-  background: transparent;
-  max-height: fit-content;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  justify-content: space-around;
-`;
 
 
 type PropsBtn = {

@@ -2,7 +2,7 @@ import * as M from "../modal/stylesModal";
 
 import CardModalTexto from "../modal/CardModalTexto";
 
-import negado from "../../assets/images/svgs/negado.svg";
+import negado from "../../assets/svgs/negado.svg";
 
 const CardDesemvolver = () => {
   return (
