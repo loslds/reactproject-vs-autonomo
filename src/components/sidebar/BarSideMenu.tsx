@@ -8,6 +8,8 @@ import acabamento from "../../assets/pngs/acabamento.png";
 import expedicao from "../../assets/pngs/expedicao.png";
 import administracao from "../../assets/pngs/administra.png";
 import master from "../../assets/pngs/master.png";
+import { useNavigate } from "react-router-dom";
+
 import config from "../../assets/pngs/config.png";
 
 import ContainerBarSideMain from "./ContainerBarSideMain";
@@ -21,41 +23,39 @@ type PropsHeader = {
   loginonoff?: boolean;
 };
 const BarSideMenu = ({ loginonoff }: PropsHeader) => {
-  // const [ismodulo, setIsModulo] = React.useState(false);
-  // const [ismdrecep, setIsMdRecep] = React.useState(false);
+  const navigate = useNavigate();
+
+  const goto = (path: string) => {
+    return () => {
+      navigate(path);
+    };
+  };
 
   const [ismodalnotlogin, setIsModalNotLogin] = React.useState(false);
 
   return (
     <ContainerBarSideMain>
       <S.ContainerButtonSRigth>
-        <ButtonSideBar
-          img={menu}
-          titbtn={"Menu..."}
-          onClick={() => alert("cliquei Design" + loginonoff)}
-        />
+        <ButtonSideBar img={menu} titbtn={"Menu..."} onClick={() => {}} />
       </S.ContainerButtonSRigth>
       <ContainerItensMenu>
-        <ButtonSideBar
-          img={servicos}
-          titbtn="Recepção..."
-          onClick={() => {
-            setIsModalNotLogin(true);
-          }}
-        />
-         {ismodalnotlogin ? (
-        <PageModal
-          ispx={true}
-          ptop={'25%'}
-          pwidth={'50%'}
-          pheight={'50%'}
-          titulo={'Acesso ao Sistema.'}
-          onClose={() => setIsModalNotLogin(false)}
-        >
-          <CardAcessoSistema />
-          </PageModal>
-      ): null}
-
+        {!loginonoff ? (
+          <ButtonSideBar
+            img={servicos}
+            titbtn="Recepção..."
+            onClick={() => {
+              setIsModalNotLogin(true);
+            }}
+          />
+        ) : (
+          <ButtonSideBar
+            img={servicos}
+            titbtn="Recepção..."
+            onClick={() => {
+              goto("/recepcappg");
+            }}
+          />
+        )}
         <ButtonSideBar
           img={design}
           titbtn="Design..."
@@ -92,6 +92,18 @@ const BarSideMenu = ({ loginonoff }: PropsHeader) => {
           onClick={() => alert("cliquei Config")}
         />
       </ContainerItensMenu>
+      {!ismodalnotlogin ? (
+        <PageModal
+          ispx={true}
+          ptop={"25%"}
+          pwidth={"50%"}
+          pheight={"50%"}
+          titulo={"Acesso ao Sistema."}
+          onClose={() => setIsModalNotLogin(false)}
+        >
+          <CardAcessoSistema />
+        </PageModal>
+      ) : null}
     </ContainerBarSideMain>
   );
 };

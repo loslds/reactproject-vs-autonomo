@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  border: 1px dashed #fff;
+  border: 0;
   max-width: 100%;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
 `;
 export const ContainerMenuPage = styled.div`
-  border: 1px dashed #fff;
+  border: none;
   margin: 0px 0px 0px 2px;
   padding: 0px 0px 0px 0px;
   max-width: 99%;
