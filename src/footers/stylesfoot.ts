@@ -2,79 +2,101 @@ import styled from 'styled-components';
 import semimg from '../assets/svgs/semimg.svg'
 
 export const AreaContainer = styled.div`
-  /* border: 1px green solid; */
+  bottom: auto;
+  left: auto;
   border: none;
-  padding: 0px 10px 0px 5px;
-  margin: 0px 5px 0px 5px;
-  width: 100%;
-  background: transparent;
-  color: black;
+  margin: 0px 0px 0px 2px;
+  padding: 0px 0px 0px 0px;
+  max-width: 99%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   align-content: center;
+  color: black;
+`;
+type Props3Collun = {
+  pwidth?: string;
+ };
+export const Area3Collun = styled.div<Props3Collun>`
+  border: 1px solid ;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0cqmin 0px 0px 0px;
+  margin: 2px 0px 2px 0px;
+  width: ${({ pwidth }) => pwidth || '25%'};
+  background: #a7e6fa;
+  display: flex;
+  flex-flow: wrap;
+/*
+border-right: 3px;
+  bor
+  border-color: #000000;
+  padding: 20px 0px 3px 0px;
+  margin: 2px 0px 2px 0px;
+  min-height: 50px;
+  width: ${({ pwidth }) => pwidth || '33%'};
+  background: transparent;
+  display: flex;
+  flex-flow: wrap;
+//  justify-content: center; */
+`;
+//////////////////////////////////////////////////////
+// div de divisão de painel do theme
+export const DivisionVPanel = styled.div`
+  border: 0px;
+  padding: 0px 1px 0px 1px;
+  margin: 0px 1px 0px 1px;
+  width: 2px;
+  //nin-height: 99%;
+  display: flex;
+  background-color: #7f7fbb;
 `;
 
 export const AreaFlex = styled.div`
-  /* border: 1px violet dashed; */
-  border: none;
+  border: 1px violet dashed;
+  /* border: none; */
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-  min-height: 100px;
-  width: 900px;
-  background-color: tranparent; /* #a7e6fa;  #afebf0; #a2dde0; */
+  //min-height: 100px;
+  width: 100%;
+  background-color: transparent; /* #a7e6fa;  #afebf0; #a2dde0; */
   /* background: #e6e6e6; */
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
 //  align-items: center;
   align-content: center;
-  img {
+  justify-content: space-around;
+  /* img {
     padding: 0px 0px 0px 0px;
     margin: 2px 5px 2px 5px;
 
-  }
+  } */
 `;
 
 type PropsCollun = {
   pwidth?: string;
-  isclick?: boolean;
-  onClick?: () => void;
  };
 export const AreaCollun = styled.div<PropsCollun>`
   border: 3px solid ;
   border-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  padding: 0px 0px 0px 0px;
-  margin: 3px 0px 3px 0px;
+  padding: 0cqmin 0px 0px 0px;
+  margin: 0px 0px 3px 0px;
   width: ${({ pwidth }) => pwidth || '25%'};
   background: #a7e6fa;
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
-  //align-items: center;
-  //align-content: center;
-  :hover {
-    border-color: rgba(255, 255, 0, 1);
-    // cursor: ${props => ( props.isclick ? 'point' : 'default')};
-  }
-  label {
-    padding: 0px 0px 0px 0px;
-    margin: 3px 0px 3px 0px;
-    font-style: normal;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-weight: bold;
-  }
+//  justify-content: center;
 `;
 
 export const AreaCabecalho = styled.div`
-  border: none;
+  border-bottom: 1px solid ;
+  border-color: rgba(0, 0, 0, 0.2);
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-  top: 0px;
   height: 22px;
   width: 100%;
+  background-color: transparent;
   display: flex;
   flex-flow: row wrap;
   justify-content: left;
@@ -82,36 +104,21 @@ export const AreaCabecalho = styled.div`
   align-content: center;
   font-size: 12px;
   line-height: 14px;
-  background-color: transparent;
+
 `;
 
-
 export const AreaContent = styled.div`
-  /* border: 1px yellow solid; */
-  border: none;
+  border: 1px red solid;
+  //border: none;
   padding: 0px 2px 0px 2px;
   margin: 0px 0px 0px 0px;
-  width: 98%;
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   align-content: center;
   background: transparent;
-  label {
-    padding: 0px 0px 0px 0px;
-    margin: 3px 0px 3px 0px;
-    font-style: normal;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-weight: bold;
-  }
-  span {
-    padding: 0px 0px 0px 0px;
-    margin: 5px 0px 5px 0px;
-    font-style: normal;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-weight: normal;
-  }
 `;
 
 export const AreaContainerButton = styled.div`
@@ -142,8 +149,6 @@ export const AreaContainerButton = styled.div`
   }
 `;
 
-
-
 type PropsDivImgACntt = {
 divheight? : string;
 divwidth? : string;
@@ -153,17 +158,37 @@ export const DivImgAreaContent = styled.div<PropsDivImgACntt>`
   border: 0px;
   padding: 1px 1px 1px 1px;
   margin: 3px 0px 3px 0px;
-  height: ${({ divheight }) => divheight || '35px'};
-  width: ${({ divwidth }) => divwidth || '45px'};
+  min-height: ${({ divheight }) => divheight || '35px'};
+  //width: ${({ divwidth }) => divwidth || '45px'};
   display: flex;
+  flex-wrap: wrap;
+  flex-flow: row ;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  /* background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(${({ img }) => img || semimg}); */
+`;
+export const DivAreaImgButton = styled.div`
+  border: 1px dashed green;
+  padding: 1px 1px 1px 1px;
+  margin: 3px 0px 3px 0px;
+  min-height: 50px;
+  width: 45%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: right;
+  align-items: center;
+  align-content: center;
+  /* display: flex;
+  position: ;
   flex-flow: wrap;
   justify-content: center;
   align-content: center;
-  align-items: center;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(${({ img }) => img || semimg});
+  align-items: center; */
 `;
 
 

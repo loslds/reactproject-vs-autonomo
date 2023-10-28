@@ -19,15 +19,5 @@ export const ThemeLogo = ({ children }: PropsThemeLogo) => {
         <FootLogin />
       </L.ContainerLogoMainFlex>
     </L.ContainerLogoMain>
-
-    // <L.ContainerLogo>
-    //   <L.AreaLogo>
-    //     <HeaderLogo />
-    //     <L.StepLogo>
-    //       <L.SidebarLogo>sidebar</L.SidebarLogo>
-    //       <L.PageLogo>{children}</L.PageLogo>
-    //     </L.StepLogo>
-    //   </L.AreaLogo>
-    // </L.ContainerLogo>
   );
 };

@@ -4,11 +4,11 @@ type PropsFootColuuns = {
   pwidth?: string;
   children?: React.ReactNode | JSX.Element;
 };
-const BarColunsFoot = ({ pwidth, children }:PropsFootColuuns) => {
+const Bar3ColunsFoot = ({ pwidth, children }:PropsFootColuuns) => {
   return (
-    <F.AreaCollun pwidth={pwidth }>
+    <F.Area3Collun pwidth={pwidth }>
       {children}
-    </F.AreaCollun>
+    </F.Area3Collun>
   );
 };
-export default BarColunsFoot;
+export default Bar3ColunsFoot;

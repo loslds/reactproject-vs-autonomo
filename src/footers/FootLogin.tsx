@@ -1,17 +1,22 @@
-import React from "react";
+//import React from "react";
 import * as F from "./stylesfoot";
 
 //import { useNavigate } from 'react-router-dom';
 
-import BarCabecalho from "./BarCabecalho";
+//import BarCabecalho from "./BarCabecalho";
 import BarMainFoot from "./BarMainFoot";
-import BarColunsFoot from "./BarColunsFoot";
-import BarAreaContent from "./BarAreaContentFoot";
-import BarDivImgFoot from "./BarDivImgFoot";
+import Bar3ColunsFoot from "./Bar3ColunsFoot";
+import BarCabecalho from "./BarCabecalho";
+//import BarColunsFoot from "./BarColunsFoot";
+//import BarAreaContent from "./BarAreaContentFoot";
+//import BarDivImgFoot from "./BarDivImgFoot";
 //import BarDivImgFoot from "./BarDivImgFoot";
 
-import home from "../assets/svgs/home.svg";
-import local from "../assets/svgs/local.svg";
+/////////// sobre ...............
+//import home from "../assets/svgs/home.svg";
+/////////// sobre ...............
+//import local from "../assets/svgs/local.svg";
+/////////// contatos ...............
 // import fone from "../assets/svgs/telefone.svg";
 // import email from "../assets/svgs/email.svg";
 // import watszapp from "../assets/svgs/watszapp.svg";
@@ -21,13 +26,14 @@ import local from "../assets/svgs/local.svg";
 // import tiktok from "../assets/svgs/tiktok.svg";
 // import telegram from "../assets/svgs/telegram.svg";
 // import internet from "../assets/svgs/internet.svg";
-import b_bordado from "../assets/svgs/b_bordado.svg";
+/////////// Produtos ...............
+//import b_bordado from "../assets/svgs/b_bordado.svg";
 // import l_laser from "../assets/svgs/l_laser.svg";
 // import g_laser from "../assets/svgs/g_laser.svg";
 // import d_diverso from "../assets/svgs/d_diverso.svg";
 
-import PageModal from "../components/modal/PageModal";
-import CardDesemvolver from "../components/modalhelp/CardDesenvolver";
+//import PageModal from "../components/modal/PageModal";
+//import CardDesemvolver from "../components/modalhelp/CardDesenvolver";
 
 // type CharOpc =
 //     'Sobre'|
@@ -74,8 +80,8 @@ import CardDesemvolver from "../components/modalhelp/CardDesenvolver";
 //    };
 
 const FootLogin = () => {
-  const [issobre, setIsSobre] = React.useState(false); //1
-  const [islocal, setIsLocal] = React.useState(false); //2
+  //const [issobre, setIsSobre] = React.useState(false); //1
+  //const [islocal, setIsLocal] = React.useState(false); //2
   // const [istelef, setIsTelef] = React.useState(false); //3
   // const [isemail, setIsEmail] = React.useState(false); //4
   // const [iswatsz, setIsWatsz] = React.useState(false); //5
@@ -85,100 +91,41 @@ const FootLogin = () => {
   // const [istikto, setIsTikto] = React.useState(false); //9
   // const [isteleg, setIsTeleg] = React.useState(false); //10
   // const [isinter, setIsInter] = React.useState(false); //11
-  const [isborda, setIsBorda] = React.useState(false); //12
+  //const [isborda, setIsBorda] = React.useState(false); //12
   // const [iscorte, setIsCorte] = React.useState(false); //13
   // const [isgrava, setIsGrava] = React.useState(false); //14
   // const [isdiver, setIsDiver] = React.useState(false); //15
 
   // const [isopcao, setIsOpcao] = React.useState("");
 
-  // React.useEffect( () => {
-  //   let nmmod = state.nm_modulo;
-  //   let nmpth = state.path_modulo;
-
-  //   setIsOpcao(false);
-  //   if (nmmod === 'Recepção.') {
-  //     setOnRecep(true);
-  //   } else if (nmmod === 'Design.') {
-  //     setOnDesig(true);
-  //   } else if (nmmod === 'Produção.') {
-  //     setOnProdu(true);
-  //   } else if (nmmod === 'Acabamento.') {
-  //     setOnAcaba(true);
-  //   } else if (nmmod === 'Expedição.') {
-  //     setOnExped(true);
-  //   } else if (nmpth === 'Administração.') {
-  //     setOnAdmin(true);
-  //   }
-  // }, []);
-
-  // const handlerClickButton = ( e?: string ) => {
-  //   let rtn = 0;
-  //   if ( e === '' ) { rtn = 0;
-  //   } else {rtn = Number(e);
-  //   };
-  //   setIsSobre(false);
-  //   setIsLocal(false);
-  //   setIsTelef(false);
-  //   setIsEmail(false);
-  //   setIsWatsz(false);
-  //   setIsInsta(false);
-  //   setIsFaceb(false);
-  //   setIsTwite(false);
-  //   setIsTikto(false);
-  //   setIsTeleg(false);
-  //   setIsInter(false);
-  //   setIsBorda(false);
-  //   setIsCorte(false);
-  //   setIsGrava(false);
-  //   setIsDiver(false);
-  //   setIsOpcao('');
-
-  //   switch (rtn ) {
-  //     case 1 :
-  //       setIsSobre(true);
-  //       return setIsOpcao('1') ;
-  //     } else if (rtn === 2){
-  //       setIsLocal(true);
-  //     } else if (rtn === 3){
-  //       setIsTelef(true);
-  //     } else if (rtn === 4){
-  //       setIsEmail(true);
-  //     } else if (rtn === 5){
-  //       setIsWatsz(true);
-  //     } else if (rtn === 6){
-  //       setIsInsta(true);
-  //     } else if (rtn === 7){
-  //       setIsFaceb(true);
-  //     } else if (rtn === 8){
-  //       setIsTwite(true);
-  //     } else if (rtn === 9){
-  //       setIsTikto(true);
-  //     } else if (rtn === 10){
-  //       setIsTeleg(true);
-  //     } else if (rtn === 11){
-  //       setIsInter(true);
-  //     } else if (rtn === 12){
-  //       setIsBorda(true);
-  //     } else if (rtn === 13){
-  //       setIsCorta(true);
-  //     } else if (rtn === 14){
-  //       setIsGrava(true);
-  //     } else if (rtn === 15){
-  //       setIsDiver(true);
-  //     };
-  //   };
-  // };
-
   return (
     <BarMainFoot>
-      <BarColunsFoot pwidth={"32%"}>
+      <Bar3ColunsFoot pwidth={"32%"}>
+        <BarCabecalho title={"Sobre."} />
+        <h3>aaaa</h3>
+      </Bar3ColunsFoot>
+      <F.DivisionVPanel />
+      <Bar3ColunsFoot pwidth={"32%"}>
+        <BarCabecalho title={"Contatos."} />
+        <h3>bbb</h3>
+      </Bar3ColunsFoot>
+      <F.DivisionVPanel />
+
+      <Bar3ColunsFoot pwidth={"32%"}>
+        <BarCabecalho title={"Produtos."} />
+        <h3>ccc</h3>
+      </Bar3ColunsFoot>
+
+      {/* <BarColunsFoot pwidth={"32.5%"}>
         <BarCabecalho title={"Sobre."} />
         <BarAreaContent>
-          <BarDivImgFoot>
+          <BarDivImgFoot
             heightdiv={"50px"}
             widthdiv={"50px"}
             imgdiv={home}
+          >
+            <h5>Quen Somos.</h5>
+            <F.DivAreaImgButton>
             <F.ButtonImgFoot
               img={home}
               title="Sobre."
@@ -186,6 +133,7 @@ const FootLogin = () => {
                 setIsSobre(true);
               }}
             />
+            </F.DivAreaImgButton>
           </BarDivImgFoot>
           {issobre ? (
             <PageModal
@@ -201,7 +149,7 @@ const FootLogin = () => {
           ) : null}
         </BarAreaContent>
       </BarColunsFoot>
-      <BarColunsFoot pwidth={"32%"}>
+      <BarColunsFoot pwidth={"32.5%"}>
         <BarCabecalho title={"Contatos."} />
         <F.AreaContainerButton>
           <F.ButtonImgFoot
@@ -226,7 +174,7 @@ const FootLogin = () => {
         </F.AreaContainerButton>
       </BarColunsFoot>
 
-      <BarColunsFoot pwidth={"32%"}>
+      <BarColunsFoot pwidth={"32.5%"}>
         <BarCabecalho title={"Produtos."} />
         <F.AreaContainerButton>
           <F.ButtonImgFoot
@@ -251,7 +199,7 @@ const FootLogin = () => {
             </PageModal>
           ) : null}
         </F.AreaContainerButton>
-      </BarColunsFoot>
+      </BarColunsFoot> */}
     </BarMainFoot>
   );
 };

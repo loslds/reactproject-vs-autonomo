@@ -74,6 +74,7 @@ justify-content: center;
 align-items: center;
 align-content: center;
 `;
+
 export const ContainerMainTitleFlex = styled.div`
   border: 0px;
   padding: 0px 0px 0px 0px;

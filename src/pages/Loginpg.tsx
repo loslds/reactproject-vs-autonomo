@@ -1,9 +1,50 @@
 import * as L from "./stylespg";
+
 import { ThemeLogo } from "../components/themes";
+//import { AcessoActions, AcessoUseForm } from '../components/contexts/AcessoContext';
 
 export const Loginpg = () => {
 
-  
+//  const { state, dispatch } = AcessoUseForm();
+
+  //               // React.useEffect(() => {
+//   dispatch({ type: AcessoActions.setIdAces, payload: idacesso });
+//   // dispatch({ type: AcessoActions.setIdEmp, payload: 0 });
+//   dispatch({ type: AcessoActions.setNmFant, payload: nmusuario });
+//   dispatch({ type: AcessoActions.setIdUser, payload: iduser });
+//   // dispatch({ type: AcessoActions.setIdNmUser, payload: '' });
+//   // dispatch({ type: AcessoActions.setPswUser, payload: '' });
+//   dispatch({ type: AcessoActions.setPin, payload: pinusuario });
+//   dispatch({ type: AcessoActions.setMail, payload: mailusuario });
+//   dispatch({ type: AcessoActions.setFoneC, payload: cellusuario });
+//   dispatch({ type: AcessoActions.setLvMod, payload: nvmodusuario });
+//   // dispatch({ type: AcessoActions.setNmRecep, payload: '' });
+//   dispatch({ type: AcessoActions.setMdRecep, payload: mdreceusuario });
+//   // dispatch({ type: AcessoActions.setNmDesig, payload: '' });
+//   dispatch({ type: AcessoActions.setMdDesig, payload: mddesiusuario });
+//   // dispatch({ type: AcessoActions.setNmProdu, payload: '' });
+//   dispatch({ type: AcessoActions.setMdProdu, payload: mdprodusuario });
+//   // dispatch({ type: AcessoActions.setNmAcaba, payload: '' });
+//   dispatch({ type: AcessoActions.setMdAcaba, payload: mdacabusuario });
+//   // dispatch({ type: AcessoActions.setNmExped, payload: ''});
+//   dispatch({ type: AcessoActions.setMdExped, payload: mdexpeusuario });
+//   // dispatch({ type: AcessoActions.setNmAdmin, payload: '' });
+//   dispatch({ type: AcessoActions.setMdAdmin, payload: mdadmiusuario });
+//   // dispatch({ type: AcessoActions.setNmAdmin, payload: '' });
+//   dispatch({ type: AcessoActions.setMdMaster, payload: mdmastusuario });
+//   // dispatch({ type: AcessoActions.setNmMaster, payload: '' });
+//   dispatch({ type: AcessoActions.setMdConfig, payload: mdconfigusuario });
+//   // dispatch({ type: AcessoActions.setNmConfig, payload: '' });
+//   dispatch({ type: AcessoActions.setPinAdm, payload: pinmaster });
+//   // dispatch({ type: AcessoActions.setPinAdm, payload: 1234 });
+//   dispatch({ type: AcessoActions.setAcessoPg, payload: titlepagina });
+
+//   dispatch({ type: AcessoActions.setLogado, payload: logado });
+//   dispatch({ type: AcessoActions.setDtIni, payload: logoonsys });
+//   // dispatch({ type: AcessoActions.setDtFim, payload: '' });
+//   // dispatch({ type: AcessoActions.setTmp, payload: '' });
+// // }, [dispatch]);
+
   return (
     <ThemeLogo>
       <L.Container>

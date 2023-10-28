@@ -4,7 +4,7 @@ import * as F from './stylesfoot';
 type PropsFootCab = {
   title?: string;
 };
-const BarCabecalho: React.FC<PropsFootCab> = ({ title }) => {
+const BarCabecalho= ({ title }: PropsFootCab) => {
   return (
     <F.AreaCabecalho>
       <h4>{title}</h4>

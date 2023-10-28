@@ -1,10 +1,10 @@
 import React from 'react';
 import * as F from './stylesfoot';
 
-type PropsFootHome = {
+type PropsAreaContainer = {
   children?: React.ReactNode | JSX.Element;
 };
-const BarMainFoot: React.FC<PropsFootHome> = ({ children }) => {
+const BarMainFoot= ({ children }: PropsAreaContainer) => {
 
   return (
     <F.AreaContainer>
