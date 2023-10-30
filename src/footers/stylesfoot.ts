@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import semimg from '../assets/svgs/semimg.svg'
 
 export const AreaContainer = styled.div`
-  bottom: auto;
-  left: auto;
   border: none;
   margin: 0px 0px 0px 2px;
   padding: 0px 0px 0px 0px;
@@ -12,66 +10,119 @@ export const AreaContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  color: black;
+  background-color: transparent;
+  color: #000;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace, Verdana, Tahoma, sans-serif;
+  font-style: normal;
+  label {
+    padding: 0px 0px 0px 0px;
+    margin: 3px 0px 3px 10px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 18px;
+    color: #000;
+  }
 `;
+
+export const AreaFlex = styled.div`
+border: 1px red dashed;
+/* border: none; */
+padding: 0px 0px 0px 0px;
+margin: 0px 0px 0px 0px;
+//min-height: 100px;
+width: 100%;
+background-color: transparent; /* #a7e6fa;  #afebf0; #a2dde0; */
+display: flex;
+flex-flow: row wrap;
+align-content: center;
+justify-content: space-around;
+`;
+/////////////////////////////////////////////////
 type Props3Collun = {
   pwidth?: string;
  };
 export const Area3Collun = styled.div<Props3Collun>`
-  border: 1px solid ;
+  border: 2px solid ;
   border-color: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 0cqmin 0px 0px 0px;
   margin: 2px 0px 2px 0px;
   width: ${({ pwidth }) => pwidth || '25%'};
   background: #a7e6fa;
   display: flex;
   flex-flow: wrap;
-/*
-border-right: 3px;
-  bor
-  border-color: #000000;
-  padding: 20px 0px 3px 0px;
-  margin: 2px 0px 2px 0px;
-  min-height: 50px;
-  width: ${({ pwidth }) => pwidth || '33%'};
-  background: transparent;
-  display: flex;
-  flex-flow: wrap;
-//  justify-content: center; */
 `;
-//////////////////////////////////////////////////////
 // div de divisão de painel do theme
 export const DivisionVPanel = styled.div`
   border: 0px;
   padding: 0px 1px 0px 1px;
   margin: 0px 1px 0px 1px;
   width: 2px;
-  //nin-height: 99%;
   display: flex;
   background-color: #7f7fbb;
 `;
-
-export const AreaFlex = styled.div`
-  border: 1px violet dashed;
-  /* border: none; */
-  padding: 0px 0px 0px 0px;
+////////////////////////////////////////////////////////
+// itens da coluna
+export const AreaContentCollumItem = styled.div`
+  border-bottom: 1px solid ;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 0px 2px 0px 2px;
   margin: 0px 0px 0px 0px;
-  //min-height: 100px;
   width: 100%;
-  background-color: transparent; /* #a7e6fa;  #afebf0; #a2dde0; */
-  /* background: #e6e6e6; */
   display: flex;
   flex-flow: row wrap;
-//  align-items: center;
-  align-content: center;
   justify-content: space-around;
-  /* img {
-    padding: 0px 0px 0px 0px;
-    margin: 2px 5px 2px 5px;
-
-  } */
+  align-items: center;
+  align-content: center;
+  background: transparent;
+  :hover {
+    //border-color: rgba(230, 230, 230, 1);
+    background: rgba(225, 235, 252, 1);
+  }
 `;
+//////////////////////////////////////////////////
+/** conteudo da coluna ESquerda  */
+export const DivAreaCollunItemLeft = styled.div<{ img?: string }>`
+  border: 1px solid red ;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  height: 35px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: Left;
+  align-content: center;
+  align-items: left;
+  background: transparent;
+`;
+export const AreaTitleItenLeft = styled.div`
+  border-bottom: 1px solid ;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  height: 20px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 12px;
+  line-height: 14px;
+
+`;
+
+
+
+
+
+
+
 
 type PropsCollun = {
   pwidth?: string;
@@ -94,32 +145,37 @@ export const AreaCabecalho = styled.div`
   border-color: rgba(0, 0, 0, 0.2);
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-  height: 22px;
+  height: 20px;
   width: 100%;
   background-color: transparent;
   display: flex;
   flex-flow: row wrap;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   align-content: center;
   font-size: 12px;
   line-height: 14px;
-
 `;
-
-export const AreaContent = styled.div`
-  border: 1px red solid;
-  //border: none;
-  padding: 0px 2px 0px 2px;
+export const DivAreaCollunItemRight = styled.div<{ img?: string }>`
+  border: 1px solid blue ;
+  padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-  width: 100%;
+  height: 35px;
+  //width: 35%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
+  flex-flow: wrap;
+  justify-content: right;
   align-content: center;
+  align-items: center;
   background: transparent;
 `;
+
+
+
+
+
+
+
 
 export const AreaContainerButton = styled.div`
   border: none;
@@ -159,18 +215,15 @@ export const DivImgAreaContent = styled.div<PropsDivImgACntt>`
   padding: 1px 1px 1px 1px;
   margin: 3px 0px 3px 0px;
   min-height: ${({ divheight }) => divheight || '35px'};
-  //width: ${({ divwidth }) => divwidth || '45px'};
+  width: ${({ divwidth }) => divwidth || '45px'};
   display: flex;
   flex-wrap: wrap;
   flex-flow: row ;
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  /* background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(${({ img }) => img || semimg}); */
 `;
+
 export const DivAreaImgButton = styled.div`
   border: 1px dashed green;
   padding: 1px 1px 1px 1px;
@@ -226,105 +279,104 @@ type PropsBtnImgFoot = {
 
 
 
+// export const AreaButtons = styled.div`
+//   border: 1px black solid;
+//   padding: 1px 1px 1px 1px;
+//   margin: 3px 0px 3px 0px;
+//   width: 99%;
+//   font-size: 16px;
+//   display: flex;
+//   flex-flow: wrap;
+//   justify-content: center;
+//   align-content: center;
+//   align-items: center;
+//   color: black;
+// `;
 
-export const AreaButtons = styled.div`
-  border: 1px black solid;
-  padding: 1px 1px 1px 1px;
-  margin: 3px 0px 3px 0px;
-  /* height: 100%; */
-  width: 99%;
-  font-size: 16px;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  color: black;
-`;
-
-export const DivImgAreaButton = styled.div<{ img?: string }>`
-  border: 0px;
-  padding: 1px 1px 1px 1px;
-  margin: 3px 0px 3px 0px;
-  height: 35px;
-  width: 45%;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(${({ img }) => img || semimg});
-`;
+// export const DivImgAreaButton = styled.div<{ img?: string }>`
+//   border: 0px;
+//   padding: 1px 1px 1px 1px;
+//   margin: 3px 0px 3px 0px;
+//   height: 35px;
+//   width: 45%;
+//   display: flex;
+//   flex-flow: wrap;
+//   justify-content: center;
+//   align-content: center;
+//   align-items: center;
+//   background-position: center;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   background-image: url(${({ img }) => img || semimg});
+// `;
 
 
-export const ButtonsFoot = styled.button<{ oncursor?: boolean }>`
-  border: 1px solid black;
-  padding: 1px 1px 1px 1px;
-  margin: 0px 5px 0px 5px;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'Courier New', 'Courier', 'monospace';
-  background: transparent;
-  /* cursor: pointer; */
-  cursor: pointer;
-  outline: none;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  align-items: center;
-`;
-type PropsBtSB = {
-  img?: string;
-  titbtn?: string;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-};
-export const ButtonsBnt = styled.button<PropsBtSB>`
-  border: 1px solid;
-  border-color: transparent;
-  border-radius: 5px;
-  padding: 1px 5px 1px 5px;
-  margin: 0px 5px 0px 5px;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'Courier New', 'Courier', 'monospace';
-  background: transparent;
-  cursor: pointer;
-  outline: none;
-  width: auto;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  align-items: center;
-  :hover {
-    border-color: rgba(230, 230, 230, 1);
-    background: rgba(225, 235, 252, 1);
-  }
-`;
+// export const ButtonsFoot = styled.button<{ oncursor?: boolean }>`
+//   border: 1px solid black;
+//   padding: 1px 1px 1px 1px;
+//   margin: 0px 5px 0px 5px;
+//   font-size: 16px;
+//   font-weight: bold;
+//   font-family: 'Courier New', 'Courier', 'monospace';
+//   background: transparent;
+//   /* cursor: pointer; */
+//   cursor: pointer;
+//   outline: none;
+//   height: 100%;
+//   width: 100%;
+//   display: flex;
+//   flex-flow: wrap;
+//   justify-content: center;
+//   align-items: center;
+// `;
 
-//// ContainerMainItem /////
-export const ContainerMain = styled.div`
-  border: 0px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  min-width: 100%;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  background-color: transparent;
-  :hover {
-    border-color : yellow;
-  }
-  label {
-    padding: 0px 10px 0px 10px;
-    width: 100%;
-    font-size: 12px;
-    font-family: normal;
-  }
-`;
+// type PropsBtSB = {
+//   img?: string;
+//   titbtn?: string;
+//   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+// };
+// export const ButtonsBnt = styled.button<PropsBtSB>`
+//   border: 1px solid;
+//   border-color: transparent;
+//   border-radius: 5px;
+//   padding: 1px 5px 1px 5px;
+//   margin: 0px 5px 0px 5px;
+//   font-size: 16px;
+//   font-weight: bold;
+//   font-family: 'Courier New', 'Courier', 'monospace';
+//   background: transparent;
+//   cursor: pointer;
+//   outline: none;
+//   width: auto;
+//   display: flex;
+//   flex-flow: wrap;
+//   justify-content: center;
+//   align-items: center;
+//   :hover {
+//     border-color: rgba(230, 230, 230, 1);
+//     background: rgba(225, 235, 252, 1);
+//   }
+// `;
+
+// //// ContainerMainItem /////
+// export const ContainerMain = styled.div`
+//   border: 0px;
+//   padding: 0px 0px 0px 0px;
+//   margin: 0px 0px 0px 0px;
+//   min-width: 100%;
+//   display: flex;
+//   flex-flow: wrap;
+//   justify-content: space-around;
+//   align-items: center;
+//   align-content: center;
+//   background-color: transparent;
+//   :hover {
+//     border-color : yellow;
+//   }
+//   label {
+//     padding: 0px 10px 0px 10px;
+//     width: 100%;
+//     font-size: 12px;
+//     font-family: normal;
+//   }
+// `;

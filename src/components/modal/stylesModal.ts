@@ -49,8 +49,12 @@ export const Content = styled.div`
     margin-left: 15px;
   }
   p {
-    color: #000;
+    margin: 0px 5px 0px 5px;
+    padding: 0px 2px 0px 2px;
+    font-size: 14px;
   }
+  
+
 `;
 
 type PropsMain = {

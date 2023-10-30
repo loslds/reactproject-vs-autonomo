@@ -53,12 +53,6 @@ export const ContainerLogoMain = styled.div`
   h5 {
     font-size: 16px;
   }
-  p {
-    margin: 0px 5px 0px 5px;
-    padding: 0px 2px 0px 2px;
-    color: #000;
-    font-size: 14px;
-  }
   li {
     list-style-type: none;
     margin-left: 15px;
@@ -67,6 +61,13 @@ export const ContainerLogoMain = styled.div`
     margin: 0px 5px 0px 5px;
     font-size: 14px;
     color: #b8b8d4;
+  }
+  label {
+    padding: 0px 10px 0px 10px;
+    color: #b8b8d4;
+    line-height: 20px;
+    font-size: 18x;
+    font-family: normal;
   }
 `;
 //////////////////////////////////////////////////////

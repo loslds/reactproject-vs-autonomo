@@ -7,6 +7,8 @@ import * as F from "./stylesfoot";
 import BarMainFoot from "./BarMainFoot";
 import Bar3ColunsFoot from "./Bar3ColunsFoot";
 import BarCabecalho from "./BarCabecalho";
+import BarTitleItemLeft from "./BarTitleItemLeft";
+
 //import BarColunsFoot from "./BarColunsFoot";
 //import BarAreaContent from "./BarAreaContentFoot";
 //import BarDivImgFoot from "./BarDivImgFoot";
@@ -102,13 +104,28 @@ const FootLogin = () => {
     <BarMainFoot>
       <Bar3ColunsFoot pwidth={"32%"}>
         <BarCabecalho title={"Sobre."} />
-        <h3>aaaa</h3>
+        <F.AreaContentCollumItem>
+          <h3>aaaa</h3>
+        </F.AreaContentCollumItem>
+        <F.AreaContentCollumItem>
+          <h3>aaaa</h3>
+        </F.AreaContentCollumItem>
       </Bar3ColunsFoot>
+
       <F.DivisionVPanel />
+
       <Bar3ColunsFoot pwidth={"32%"}>
         <BarCabecalho title={"Contatos."} />
-        <h3>bbb</h3>
+        <F.AreaContentCollumItem>
+          <F.DivAreaCollunItemLeft>
+            <BarTitleItemLeft title={"left"} />
+          </F.DivAreaCollunItemLeft>
+          <F.DivAreaCollunItemRight>
+            <h3>Right</h3>
+          </F.DivAreaCollunItemRight>
+        </F.AreaContentCollumItem>
       </Bar3ColunsFoot>
+
       <F.DivisionVPanel />
 
       <Bar3ColunsFoot pwidth={"32%"}>
