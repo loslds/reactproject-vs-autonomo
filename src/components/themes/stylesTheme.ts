@@ -18,7 +18,7 @@ export const ContainerLogoMain = styled.div`
   left: 0px;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-flow: row wrap;

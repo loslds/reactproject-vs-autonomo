@@ -11,20 +11,19 @@ export const AreaContainer = styled.div`
   justify-content: space-between;
   align-content: center;
   background-color: transparent;
-  color: #000;
   font-size: 14px;
   line-height: 16px;
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace, Verdana, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
   font-style: normal;
+  color: #000000;
   label {
     padding: 0px 0px 0px 0px;
-    margin: 3px 0px 3px 10px;
-    font-style: normal;
-    font-weight: bold;
+    margin: 2px 0px 2px 5px;
     line-height: 20px;
     font-size: 18px;
-    color: #000;
+    text-decoration: none;
+    color: #000000;
   }
 `;
 
@@ -40,6 +39,7 @@ display: flex;
 flex-flow: row wrap;
 align-content: center;
 justify-content: space-around;
+color: #000000;
 `;
 /////////////////////////////////////////////////
 type Props3Collun = {
@@ -55,6 +55,7 @@ export const Area3Collun = styled.div<Props3Collun>`
   background: #a7e6fa;
   display: flex;
   flex-flow: wrap;
+  color: #000000;
 `;
 // div de divisão de painel do theme
 export const DivisionVPanel = styled.div`
@@ -64,6 +65,23 @@ export const DivisionVPanel = styled.div`
   width: 2px;
   display: flex;
   background-color: #7f7fbb;
+  color: #000000;
+`;
+export const AreaCabecalho = styled.div`
+  border-bottom: 1px solid ;
+  border-color: rgba(0, 0, 0, 0.2);
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  height: 20px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 12px;
+  line-height: 14px;
+  background: transparent;
 `;
 ////////////////////////////////////////////////////////
 // itens da coluna
@@ -79,169 +97,52 @@ export const AreaContentCollumItem = styled.div`
   align-items: center;
   align-content: center;
   background: transparent;
-  :hover {
-    //border-color: rgba(230, 230, 230, 1);
-    background: rgba(225, 235, 252, 1);
-  }
+  color: #000000;
 `;
 //////////////////////////////////////////////////
 /** conteudo da coluna ESquerda  */
-export const DivAreaCollunItemLeft = styled.div<{ img?: string }>`
+export const DivAreaCollunItem = styled.div`
   border: 1px solid red ;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
-  height: 35px;
+  min-width: 100px;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: Left;
-  align-content: center;
-  align-items: left;
-  background: transparent;
-`;
-export const AreaTitleItenLeft = styled.div`
-  border-bottom: 1px solid ;
-  border-color: rgba(0, 0, 0, 0.2);
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  height: 20px;
-  width: 100%;
-  background-color: transparent;
-  display: flex;
-  flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  font-size: 12px;
-  line-height: 14px;
-
-`;
-
-
-
-
-
-
-
-
-type PropsCollun = {
-  pwidth?: string;
- };
-export const AreaCollun = styled.div<PropsCollun>`
-  border: 3px solid ;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 0cqmin 0px 0px 0px;
-  margin: 0px 0px 3px 0px;
-  width: ${({ pwidth }) => pwidth || '25%'};
-  background: #a7e6fa;
-  display: flex;
-  flex-flow: wrap;
-//  justify-content: center;
-`;
-
-export const AreaCabecalho = styled.div`
-  border-bottom: 1px solid ;
-  border-color: rgba(0, 0, 0, 0.2);
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  height: 20px;
-  width: 100%;
-  background-color: transparent;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  font-size: 12px;
-  line-height: 14px;
-`;
-export const DivAreaCollunItemRight = styled.div<{ img?: string }>`
-  border: 1px solid blue ;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  height: 35px;
-  //width: 35%;
-  display: flex;
-  flex-flow: wrap;
-  justify-content: right;
-  align-content: center;
-  align-items: center;
+  //align-content: center;
+  //align-items: center;
   background: transparent;
-`;
-
-
-
-
-
-
-
-
-export const AreaContainerButton = styled.div`
-  border: none;
-/* border: 1px black solid;*/
-  padding: 2px 2px 2px 2px;
-  margin: 0px 0px 0px 0px;
-  width: 98%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  background: transparent;
-  label {
-    padding: 0px 0px 0px 0px;
-    margin: 3px 0px 3px 0px;
-    font-style: normal;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-weight: bold;
-  }
-  span {
-    padding: 0px 0px 0px 0px;
-    margin: 5px 0px 5px 0px;
-    font-style: normal;
-    font-family: Verdana, Tahoma, sans-serif;
-    font-weight: normal;
-  }
-`;
-
-type PropsDivImgACntt = {
-divheight? : string;
-divwidth? : string;
-img?: string;
-};
-export const DivImgAreaContent = styled.div<PropsDivImgACntt>`
-  border: 0px;
-  padding: 1px 1px 1px 1px;
-  margin: 3px 0px 3px 0px;
-  min-height: ${({ divheight }) => divheight || '35px'};
-  width: ${({ divwidth }) => divwidth || '45px'};
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: row ;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
-`;
-
+  color: #000000;
+ `;
+////////////////////////////////////////////
+/** item botao img collun */
+////////////////////////////////////////////
 export const DivAreaImgButton = styled.div`
-  border: 1px dashed green;
-  padding: 1px 1px 1px 1px;
-  margin: 3px 0px 3px 0px;
-  min-height: 50px;
-  width: 45%;
-
+  border: 1px solid;
+  border-radius: 45%;
+  border-color: rgba(225, 235, 252, 1);
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  min-height: 40px;
+  //min-width: 40px;
   display: flex;
   flex-flow: row wrap;
   justify-content: right;
   align-items: center;
   align-content: center;
+  background: transparent;
+  /* :hover {
+    background: rgba(225, 235, 252, 1); */
+// }
+
   /* display: flex;
   position: ;
   flex-flow: wrap;
   justify-content: center;
   align-content: center;
   align-items: center; */
+
 `;
 
 
@@ -249,17 +150,20 @@ type PropsBtnImgFoot = {
   height? : string;
   width? : string;
   img?: string;
+  title?: string;
   };
   export const ButtonImgFoot = styled.button<PropsBtnImgFoot>`
-  border: none;
-  padding: 1px 1px 1px 1px;
-  margin: 0px 5px 0px 5px;
-  height: ${({ height }) => height || '35px'};
-  width: ${({ width }) => width || '45px'};
+  border: none;/*1px solid #000000;*/
+  border-radius: 45%;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+
+  height: ${({ height }) => height || '40px'};
+  width: ${({ width }) => width || '40px'};
   font-size: 12px;
   font-weight: bold;
   font-family: 'Courier New', 'Courier', 'monospace';
-  background: transparent;
+  background: white;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -270,11 +174,159 @@ type PropsBtnImgFoot = {
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
-  :hover {
-    border-color: rgba(230, 230, 230, 1);
-    background-color: rgba(225, 235, 252, 1);
-  }
+  `;
+////////////////////////////////////////////////////////////
+
+
+
+
+
+
+export const AreaTitleCollunIten = styled.div`
+  border: none;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  min-height: 40px;
+  background-color: transparent;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: right;
+  align-items: center;
+  align-content: center;
+  color: #000000;
 `;
+///////////////////////////////////////////////////////
+
+export const DivAreaCollunImg = styled.div`
+  border: 1px solid yellow ;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  max-width: 100px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-content: center;
+  //align-items: center;
+  background: transparent;
+  color: #000000;
+
+ `;
+
+
+// export const AreaCollunImg = styled.div`
+//   border: none;
+//   padding: 0px 0px 0px 0px;
+//   margin: 0px 0px 0px 0px;
+//   min-height: 35px;
+//   background-color: transparent;
+//   display: flex;
+//   flex-flow: row wrap;
+//   justify-content: center;
+//   align-items: center;
+//   align-content: center;
+//   color: #000000;
+// `;
+///////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// type PropsCollun = {
+//   pwidth?: string;
+//  };
+// export const AreaCollun = styled.div<PropsCollun>`
+//   border: 3px solid ;
+//   border-color: rgba(0, 0, 0, 0.2);
+//   border-radius: 10px;
+//   padding: 0cqmin 0px 0px 0px;
+//   margin: 0px 0px 3px 0px;
+//   width: ${({ pwidth }) => pwidth || '25%'};
+//   background: #a7e6fa;
+//   display: flex;
+//   flex-flow: wrap;
+// //  justify-content: center;
+// `;
+
+
+
+// export const DivAreaCollunItemRight = styled.div<{ img?: string }>`
+//   border: 1px solid blue ;
+//   padding: 0px 0px 0px 0px;
+//   margin: 0px 0px 0px 0px;
+//   min-height: 35px;
+//   width: 100%;
+//   display: flex;
+//   flex-flow: wrap;
+//   justify-content: right;
+//   align-content: center;
+//   align-items: center;
+//   background: transparent;
+//   :hover {
+//     background: rgba(225, 235, 252, 1);
+//   }
+// `;
+
+// export const AreaContainerButton = styled.div`
+//   border: none;
+// /* border: 1px black solid;*/
+//   padding: 2px 2px 2px 2px;
+//   margin: 0px 0px 0px 0px;
+//   width: 98%;
+//   display: flex;
+//   flex-flow: row wrap;
+//   justify-content: space-between;
+//   align-items: center;
+//   align-content: center;
+//   background: transparent;
+//   label {
+//     padding: 0px 0px 0px 0px;
+//     margin: 3px 0px 3px 0px;
+//     font-style: normal;
+//     font-family: Verdana, Tahoma, sans-serif;
+//     font-weight: bold;
+//   }
+//   span {
+//     padding: 0px 0px 0px 0px;
+//     margin: 5px 0px 5px 0px;
+//     font-style: normal;
+//     font-family: Verdana, Tahoma, sans-serif;
+//     font-weight: normal;
+//   }
+// `;
+
+// type PropsDivImgACntt = {
+// divheight? : string;
+// divwidth? : string;
+// img?: string;
+// };
+// export const DivImgAreaContent = styled.div<PropsDivImgACntt>`
+//   border: 0px;
+//   padding: 1px 1px 1px 1px;
+//   margin: 3px 0px 3px 0px;
+//   min-height: ${({ divheight }) => divheight || '35px'};
+//   width: ${({ divwidth }) => divwidth || '45px'};
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-flow: row ;
+//   justify-content: space-around;
+//   align-content: center;
+//   align-items: center;
+// `;
 
 
 

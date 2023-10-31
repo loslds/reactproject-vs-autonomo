@@ -22,7 +22,7 @@ export const Content = styled.div`
   font-size: 12px;
   font-weight: normal;
   font-family: 'Courier New', Courier, monospace;
-  color: #000;
+  color: #000000;
   h1,
   h2,
   h3,
@@ -53,8 +53,6 @@ export const Content = styled.div`
     padding: 0px 2px 0px 2px;
     font-size: 14px;
   }
-  
-
 `;
 
 type PropsMain = {
@@ -68,7 +66,7 @@ export const ContainerModal = styled.div<PropsMain>`
   border: 2px #727272 solid;
   padding: 0px 0px 0px 0px;
   margin: 0px 10px 0px 10px;
-  color: #000;
+  color: #000000;
   top: ${({ ptop }) => ptop || '62px'};
   position: fixed;
   width: ${({ pwidth }) => pwidth || '66.3%'};
@@ -92,7 +90,7 @@ export const ContainerModulosSys = styled.div<PropsModulosSys>`
 border: 2px red solid;
 padding: 0px 0px 0px 0px;
 margin: 0px 0px 0px 0px;
-color: black;
+color: #000000;
 top: ${({ ptop }) => ptop || '62px'};
 position: fixed;
 width: ${({ pwidth }) => pwidth || '66.3%'};
@@ -120,6 +118,7 @@ export const ContentTextoModulos = styled.div<{ isscroll? : boolean }>`
   font-size: 12px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
+  color: #000000;
 `;
 ///////////////////////////////////////////////////
 
@@ -138,6 +137,7 @@ export const ContainerModalTexto = styled.div`
   font-size: 12px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
+  color: #000000;
 `;
 
 type PropsImg = {
@@ -182,6 +182,7 @@ export const ContainerModalImgModulo = styled.div`
   font-size: 12px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-style: normal;
+  color: #000000;
 `;
 
 /////////////// fim MainModal
@@ -201,6 +202,7 @@ export const ContainerCard = styled.div`
   align-items: center;
   font-size: 16px;
   font-style: normal;
+  color: #000000;
 `;
 
 export const ContainerCardFlex = styled.div`
@@ -215,6 +217,7 @@ export const ContainerCardFlex = styled.div`
   justify-content: center; /*space-around;*/
   align-content: center;
   align-items: center;
+  color: #000000;
 `;
 ///////////////// fim CardModal
 
@@ -247,6 +250,7 @@ export const ContainerButtonModal = styled.div`
   font-size: 12px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
+  color: #000000;
 `;
 
 export const ButtonModalImg = styled.button<{ img?: string }>`
@@ -486,9 +490,9 @@ type PropsModalModal = {
 export const ContentModalModal = styled.div<PropsModalModal>`
   border: 1px red solid ;
   padding: 0px 0px 0px 0px;
-  margin: 5px 10px 5px 10px;
+  margin: 0px 0px 0px 0px;
   min-height: ${({ pminheight }) => pminheight || '30%'};
-  width: ${({ pwidth }) => pwidth || '66.3%'};
+  width: ${({ pwidth }) => pwidth || '100%'};
   display: flex;
   flex-flow: wrap;
   justify-content: space-around;
@@ -505,6 +509,8 @@ export const ButtonModalMenu = styled.button<{ img?: string ; sizer?: string; on
   font-size: 12px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
+
+
   background-color: transparent;
   background-image: url(${({ img }) => img || semimg});
   background-repeat: no-repeat;
