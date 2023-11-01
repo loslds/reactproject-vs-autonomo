@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import semimg from '../assets/svgs/semimg.svg'
 
+////////////////////////////////////////////
+/** Content do foot */
+////////////////////////////////////////////
 export const AreaContainer = styled.div`
   border: none;
   margin: 0px 0px 0px 2px;
@@ -28,11 +31,9 @@ export const AreaContainer = styled.div`
 `;
 
 export const AreaFlex = styled.div`
-border: 1px red dashed;
-/* border: none; */
+border: none;
 padding: 0px 0px 0px 0px;
 margin: 0px 0px 0px 0px;
-//min-height: 100px;
 width: 100%;
 background-color: transparent; /* #a7e6fa;  #afebf0; #a2dde0; */
 display: flex;
@@ -41,7 +42,9 @@ align-content: center;
 justify-content: space-around;
 color: #000000;
 `;
-/////////////////////////////////////////////////
+////////////////////////////////////////////
+/** Content da Area de cada coluna foot */
+////////////////////////////////////////////
 type Props3Collun = {
   pwidth?: string;
  };
@@ -57,7 +60,9 @@ export const Area3Collun = styled.div<Props3Collun>`
   flex-flow: wrap;
   color: #000000;
 `;
-// div de divisão de painel do theme
+////////////////////////////////////////////
+/** Content da divisão da Area de cada coluna foot */
+////////////////////////////////////////////
 export const DivisionVPanel = styled.div`
   border: 0px;
   padding: 0px 1px 0px 1px;
@@ -67,6 +72,9 @@ export const DivisionVPanel = styled.div`
   background-color: #7f7fbb;
   color: #000000;
 `;
+////////////////////////////////////////////
+/** Content da Area para Cabeçalho de cada coluna foot */
+////////////////////////////////////////////
 export const AreaCabecalho = styled.div`
   border-bottom: 1px solid ;
   border-color: rgba(0, 0, 0, 0.2);
@@ -83,8 +91,9 @@ export const AreaCabecalho = styled.div`
   line-height: 14px;
   background: transparent;
 `;
-////////////////////////////////////////////////////////
-// itens da coluna
+////////////////////////////////////////////
+/** Content da Area cada coluna foot */
+////////////////////////////////////////////
 export const AreaContentCollumItem = styled.div`
   /* border-bottom: 1px solid ;
   border-color: rgba(0, 0, 0, 0.2); */
@@ -102,14 +111,11 @@ export const AreaContentCollumItem = styled.div`
   p {
    color: #000000;
    font-size: 14px;
-    /* :* {
-      color: #fb0013;
-    } */
-
   }
 `;
-//////////////////////////////////////////////////
-/** conteudo da coluna ESquerda  */
+////////////////////////////////////////////
+/** Content do Conteudo da coluna foot */
+////////////////////////////////////////////
 export const DivAreaCollunItem = styled.div`
   /* border: 1px solid ;
   border-color: #79797b; */
@@ -129,7 +135,7 @@ export const DivAreaCollunItem = styled.div`
  }
  `;
 ////////////////////////////////////////////
-/** item botao img collun */
+/** Content da Area do Button foot */
 ////////////////////////////////////////////
 export const DivAreaImgButton = styled.div`
   border: 3px solid;
@@ -145,8 +151,9 @@ export const DivAreaImgButton = styled.div`
   align-content: center;
   background: transparent;
 `;
-
-
+////////////////////////////////////////////
+/** Contentainer Botão foot */
+////////////////////////////////////////////
 type PropsBtnImgFoot = {
   height? : string;
   width? : string;
@@ -175,7 +182,14 @@ type PropsBtnImgFoot = {
   justify-content: center;
   align-items: center;
   `;
+
+
+
+
+
 ////////////////////////////////////////////////////////////
+/** texto cabeçalho collun */
+////////////////////////////////////////////
 export const AreaTitleCollunIten = styled.div`
   border: none;
   padding: 0px 0px 0px 0px;
@@ -190,6 +204,8 @@ export const AreaTitleCollunIten = styled.div`
   color: #000000;
 `;
 ///////////////////////////////////////////////////////
+
+
 
 
 
