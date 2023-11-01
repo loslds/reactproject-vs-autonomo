@@ -86,9 +86,10 @@ export const AreaCabecalho = styled.div`
 ////////////////////////////////////////////////////////
 // itens da coluna
 export const AreaContentCollumItem = styled.div`
-  border-bottom: 1px solid ;
-  border-color: rgba(0, 0, 0, 0.2);
-  padding: 0px 2px 0px 2px;
+  /* border-bottom: 1px solid ;
+  border-color: rgba(0, 0, 0, 0.2); */
+  border: none;
+  padding: 2px 2px 2px 2px;
   margin: 0px 0px 0px 0px;
   width: 100%;
   display: flex;
@@ -110,7 +111,8 @@ export const AreaContentCollumItem = styled.div`
 //////////////////////////////////////////////////
 /** conteudo da coluna ESquerda  */
 export const DivAreaCollunItem = styled.div`
-  border: 1px solid red ;
+  /* border: 1px solid ;
+  border-color: #79797b; */
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
   min-width: 100px;
@@ -132,7 +134,7 @@ export const DivAreaCollunItem = styled.div`
 export const DivAreaImgButton = styled.div`
   border: 3px solid;
   border-radius: 45%;
-  border-color: #79797b ;
+  border-color: #79797b;
   padding: 2px 2px 2px 2px;
   margin: 2px 2px 2px 2px;
   min-height: 40px;
@@ -156,7 +158,6 @@ type PropsBtnImgFoot = {
   border-radius: 45%;
   padding: 0px 0px 0px 0px;
   margin: 3px 3px 3px 3px;
-
   height: ${({ height }) => height || '40px'};
   width: ${({ width }) => width || '40px'};
   font-size: 12px;

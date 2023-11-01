@@ -67,11 +67,13 @@ const FootLogin = () => {
         <F.AreaContentCollumItem>
           <p>&emsp;&emsp;* Conheça nossas Empresas.</p>
           <h3>Quem Somos:</h3>
-          <ButtonCollunImgFoot
-            img={home}
-            title={"Localização..."}
-            onClick={() => alert("Local.")}
-          />
+          <BarDivAreaCollunImg>
+            <ButtonCollunImgFoot
+              img={home}
+              title={"Localização..."}
+              onClick={() => alert("Local.")}
+            />
+          </BarDivAreaCollunImg>
         </F.AreaContentCollumItem>
       </Bar3ColunsFoot>
 
