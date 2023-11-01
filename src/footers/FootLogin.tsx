@@ -18,12 +18,15 @@ import internet from "../assets/svgs/internet.svg";
 
 //import { useNavigate } from 'react-router-dom';
 
-//import BarCabecalho from "./BarCabecalho";
 import BarMainFoot from "./BarMainFoot";
-import Bar3ColunsFoot from "./Bar3ColunsFoot";
-import BarAga4Foot from "./BarAga4Foot";
+import BarContac3ColunsFoot from "./BarContac3ColunsFoot";
+import BarProd3ColunsFoot from "./BarProd3ColunsFoot";
+import BarTextoFoot from "./BarTextoFoot";
 import BarDivAreaCollunImg from "./BarDivAreaCollunImg";
 import ButtonCollunImgFoot from "./ButtonCollunImgFoot";
+import BarProdMainFoot from "./BarProdMainFoot";
+import BarReaderItemFoot from "./BarReaderItemFoot";
+import BarEmp3ColunsFoot from "./BarEmp3ColunsFoot";
 
 // import BarTitleCollunItem from "./BarTitleCollunIten";
 
@@ -62,25 +65,30 @@ const FootLogin = () => {
 
   return (
     <BarMainFoot>
-      <Bar3ColunsFoot pwidth={"32%"}>
-        <BarAga4Foot title={"Sobre."} />
-        <F.AreaContentCollumItem>
+      <BarEmp3ColunsFoot pwidth={"29%"}>
+        <BarReaderItemFoot>
+          <h4>"Sobre."</h4>
+        </BarReaderItemFoot>
+        <BarTextoFoot>
           <p>&emsp;&emsp;* Conheça nossas Empresas.</p>
-          <h3>Quem Somos:</h3>
+        </BarTextoFoot>
+        <F.AreaContentCollumItem>
+          <label>Quem Somos:</label>
           <BarDivAreaCollunImg>
             <ButtonCollunImgFoot
               img={home}
-              title={"Localização..."}
-              onClick={() => alert("Local.")}
+              title={"Quem Somos..."}
+              onClick={() => alert("Quem Somos.")}
             />
           </BarDivAreaCollunImg>
         </F.AreaContentCollumItem>
-      </Bar3ColunsFoot>
-
+      </BarEmp3ColunsFoot>
       <F.DivisionVPanel />
 
-      <Bar3ColunsFoot pwidth={"32%"}>
-        <BarAga4Foot title={"Contatos."} />
+      <BarContac3ColunsFoot pwidth={"40%"}>
+        <BarReaderItemFoot>
+          <h4>"Contatos."</h4>
+        </BarReaderItemFoot>
         <BarDivAreaCollunImg>
           <ButtonCollunImgFoot
             img={local}
@@ -138,14 +146,29 @@ const FootLogin = () => {
             onClick={() => alert("Internet.")}
           />
         </BarDivAreaCollunImg>
-      </Bar3ColunsFoot>
+      </BarContac3ColunsFoot>
 
       <F.DivisionVPanel />
 
-      <Bar3ColunsFoot pwidth={"32%"}>
-        <BarAga4Foot title={"Produtos."} />
-        <h3>ccc</h3>
-      </Bar3ColunsFoot>
+      <BarProd3ColunsFoot pwidth={"28%"}>
+        <BarReaderItemFoot>
+          <h4>"Produtos."</h4>
+        </BarReaderItemFoot>
+        <BarTextoFoot>
+          <p>&emsp;&emsp;* Conheça nossos Produtos.</p>
+        </BarTextoFoot>
+        <F.AreaContentCollumItem>
+          <BarProdMainFoot>
+            <label>Opções:</label>
+            <select name="empresa" defaultValue={"0"} onChange={() => {}}>
+              <option value={"0"}> Opções: </option>
+              <option value={"1"}> Bordados. </option>
+              <option value={"2"}> Corte-Laser. </option>
+              <option value={"3"}> Gravação-Laser. </option>
+            </select>
+          </BarProdMainFoot>
+        </F.AreaContentCollumItem>
+      </BarProd3ColunsFoot>
     </BarMainFoot>
   );
 };

@@ -24,34 +24,59 @@ export const ContainerLogoMain = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  //align-content: center;
   background-color: #2b2bf7;
-  color: #fff;
+  font-family: 'Courier New', Courier, monospace, Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5 {
     margin: 5px 2px 0px 10px;
     padding: 0px 2px 0px 2px;
-    line-height: normal;
+    /* line-height: normal;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.2; */
+    background: transparent;
     background-color: transparent;
   }
+  /* h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 5px 2px 0px 10px;
+    padding: 0px 2px 0px 2px;
+    background: transparent;
+    background-color: transparent;
+  } */
+
   h1 {
+    line-height: 30px;
     font-size: 28px;
+    color: #ffffff;
   }
   h2 {
+    line-height: 26px;
     font-size: 24px;
+    color: #ffffff;
   }
   h3 {
+    line-height: 22px;
     font-size: 20px;
+    color: #ffffff;
   }
   h4 {
+    line-height: 20px;
     font-size: 18px;
+    color: #ffffff;
   }
   h5 {
+    line-height: 18px;
     font-size: 16px;
+    color: #ffffff;
   }
   li {
     list-style-type: none;
@@ -60,21 +85,22 @@ export const ContainerLogoMain = styled.div`
   p {
     margin: 0px 5px 0px 5px;
     font-size: 14px;
-    color: #b8b8d4;
+    color: #ffffff;
   }
   label {
     padding: 0px 10px 0px 10px;
-    color: #b8b8d4;
+    /* color: #b8b8d4; */
+    color: #ffffff;
     line-height: 20px;
+    font-weight: bold;
     font-size: 18x;
-    font-family: normal;
   }
 `;
 //////////////////////////////////////////////////////
 // contente da Area do theme
 export const ContainerLogo = styled.div`
   background-color: #02044A;
-  color: #fff;
+  color: #ffffff;
   min-height: 100vh;
   width: 100%;
   display: flex;

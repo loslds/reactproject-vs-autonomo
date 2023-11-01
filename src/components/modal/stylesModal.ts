@@ -246,11 +246,10 @@ export const ContainerButtonModal = styled.div`
   align-items: center;
   align-content: center;
   background-color: transparent;
-  color: black;
   font-size: 12px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
-  color: #000000;
+  color: #ffffff;
 `;
 
 export const ButtonModalImg = styled.button<{ img?: string }>`
@@ -350,7 +349,6 @@ export const ContentDivOpc = styled.div`
   top: 0px;
   left: 0px;
   z-index: 1100;
-  color: white;
   background-color: rgba(0,0,0,0.1);
   display: flex;
   justify-content: center;
@@ -358,6 +356,7 @@ export const ContentDivOpc = styled.div`
   font-size: 12px;
   font-weight: normal;
   font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
   h1,
   h2,
   h3,
@@ -365,37 +364,55 @@ export const ContentDivOpc = styled.div`
   h5 {
     margin: 0px 5px 0px 5px;
     padding: 0px 0px 0px 5px;
-    color: #fff;
     font-style: normal;
+    color: #ffffff;
   }
   h1 {
     font-size: 20px;
     line-height: 22px;
+    color: #ffffff;
   }
   h2 {
     font-size: 18px;
     line-height: 20px;
+    color: #ffffff;
   }
   h3 {
     font-size: 16px;
     line-height: 18px;
+    color: #ffffff;
   }
   h4 {
     font-size: 12px;
     line-height: 14px;
+    color: #ffffff;
   }
   h5 {
     font-size: 10px;
     line-height: 12px;
+    color: #ffffff;
   }
   ul {
     margin-left: 10px ;
   }
   li {
-    margin-left: 20px ;
+    list-style-type: none;
+    margin-left: 15px;
+  }
+  p {
+    margin: 0px 5px 0px 5px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  label {
+    padding: 0px 10px 0px 10px;
+  /* color: #b8b8d4; */
+    color: #ffffff;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 18x;
   }
 `;
-
 
 type PropsDivModalMain = {
   open?: boolean;
@@ -509,8 +526,6 @@ export const ButtonModalMenu = styled.button<{ img?: string ; sizer?: string; on
   font-size: 12px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
-
-
   background-color: transparent;
   background-image: url(${({ img }) => img || semimg});
   background-repeat: no-repeat;

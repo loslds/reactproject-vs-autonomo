@@ -63,6 +63,7 @@ export const BarContainerHRigth = styled.div`
     font-style: normal;
     font-family: Verdana, Tahoma, sans-serif;
     font-weight: bold;
+    color: #ffffff;
   }
 `;
 export const ButtonHLogin = styled.button<{ img?: string }>`
