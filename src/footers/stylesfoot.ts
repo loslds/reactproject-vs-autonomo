@@ -98,6 +98,14 @@ export const AreaContentCollumItem = styled.div`
   align-content: center;
   background: transparent;
   color: #000000;
+  p {
+   color: #000000;
+   font-size: 14px;
+    /* :* {
+      color: #fb0013;
+    } */
+
+  }
 `;
 //////////////////////////////////////////////////
 /** conteudo da coluna ESquerda  */
@@ -114,35 +122,26 @@ export const DivAreaCollunItem = styled.div`
   //align-items: center;
   background: transparent;
   color: #000000;
+  :hover {
+    border-color: #ffff00;// amarelo
+ }
  `;
 ////////////////////////////////////////////
 /** item botao img collun */
 ////////////////////////////////////////////
 export const DivAreaImgButton = styled.div`
-  border: 1px solid;
+  border: 3px solid;
   border-radius: 45%;
-  border-color: rgba(225, 235, 252, 1);
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  border-color: #79797b ;
+  padding: 2px 2px 2px 2px;
+  margin: 2px 2px 2px 2px;
   min-height: 40px;
-  //min-width: 40px;
   display: flex;
   flex-flow: row wrap;
   justify-content: right;
   align-items: center;
   align-content: center;
   background: transparent;
-  /* :hover {
-    background: rgba(225, 235, 252, 1); */
-// }
-
-  /* display: flex;
-  position: ;
-  flex-flow: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center; */
-
 `;
 
 
@@ -153,10 +152,10 @@ type PropsBtnImgFoot = {
   title?: string;
   };
   export const ButtonImgFoot = styled.button<PropsBtnImgFoot>`
-  border: none;/*1px solid #000000;*/
+  border: none;
   border-radius: 45%;
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 3px 3px 3px 3px;
 
   height: ${({ height }) => height || '40px'};
   width: ${({ width }) => width || '40px'};
@@ -176,12 +175,6 @@ type PropsBtnImgFoot = {
   align-items: center;
   `;
 ////////////////////////////////////////////////////////////
-
-
-
-
-
-
 export const AreaTitleCollunIten = styled.div`
   border: none;
   padding: 0px 0px 0px 0px;
@@ -197,21 +190,31 @@ export const AreaTitleCollunIten = styled.div`
 `;
 ///////////////////////////////////////////////////////
 
-export const DivAreaCollunImg = styled.div`
-  border: 1px solid yellow ;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  max-width: 100px;
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: left;
-  align-content: center;
-  //align-items: center;
-  background: transparent;
-  color: #000000;
 
- `;
+
+
+
+
+
+
+// export const DivAreaCollunImg = styled.div`
+//   border: 3px solid ;
+//   border-color: #ffff00;
+//   padding: 0px 0px 0px 0px;
+//   margin: 0px 0px 0px 0px;
+//   max-width: 100px;
+//   display: flex;
+//   flex-flow: row;
+//   flex-wrap: wrap;
+//   justify-content: left;
+//   align-content: center;
+//   //align-items: center;
+//   background: transparent;
+//   color: #000000;
+//   :hover {
+//     border-color: #ffff00;// amarelo
+//  }
+//  `;
 
 
 // export const AreaCollunImg = styled.div`

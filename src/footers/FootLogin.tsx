@@ -1,9 +1,20 @@
 //import React from "react";
 import * as F from "./stylesfoot";
 
+/////////// sobre ...............
+import home from "../assets/svgs/home.svg";
+/////////// contatos ...............
 import local from "../assets/svgs/local.svg";
 import fone from "../assets/svgs/telefone.svg";
+import celular from "../assets/svgs/Celular.svg";
 import email from "../assets/svgs/email.svg";
+import watszapp from "../assets/svgs/watszapp.svg";
+import instagram from "../assets/svgs/instagran.svg";
+import twiter from "../assets/svgs/twiter.svg";
+import tiktok from "../assets/svgs/tiktok.svg";
+import facebook from "../assets/svgs/facebook.svg";
+import telegram from "../assets/svgs/telegram.svg";
+import internet from "../assets/svgs/internet.svg";
 
 //import { useNavigate } from 'react-router-dom';
 
@@ -13,6 +24,7 @@ import Bar3ColunsFoot from "./Bar3ColunsFoot";
 import BarCabecalho from "./BarCabecalho";
 import BarDivAreaCollunImg from "./BarDivAreaCollunImg";
 import ButtonCollunImgFoot from "./ButtonCollunImgFoot";
+
 // import BarTitleCollunItem from "./BarTitleCollunIten";
 
 //import BarColunsFoot from "./BarColunsFoot";
@@ -20,18 +32,6 @@ import ButtonCollunImgFoot from "./ButtonCollunImgFoot";
 //import BarDivImgFoot from "./BarDivImgFoot";
 //import BarDivImgFoot from "./BarDivImgFoot";
 
-/////////// sobre ...............
-//import home from "../assets/svgs/home.svg";
-/////////// contatos ...............
-
-
-// import watszapp from "../assets/svgs/watszapp.svg";
-// import instagram from "../assets/svgs/instagram.svg";
-// import facebook1 from "../assets/svgs/facebook1.svg";
-// import twiter from "../assets/svgs/twiter.svg";
-// import tiktok from "../assets/svgs/tiktok.svg";
-// import telegram from "../assets/svgs/telegram.svg";
-// import internet from "../assets/svgs/internet.svg";
 /////////// Produtos ...............
 //import b_bordado from "../assets/svgs/b_bordado.svg";
 // import l_laser from "../assets/svgs/l_laser.svg";
@@ -40,7 +40,6 @@ import ButtonCollunImgFoot from "./ButtonCollunImgFoot";
 
 //import PageModal from "../components/modal/PageModal";
 //import CardDesemvolver from "../components/modalhelp/CardDesenvolver";
-
 
 const FootLogin = () => {
   //const [issobre, setIsSobre] = React.useState(false); //1
@@ -66,7 +65,13 @@ const FootLogin = () => {
       <Bar3ColunsFoot pwidth={"32%"}>
         <BarCabecalho title={"Sobre."} />
         <F.AreaContentCollumItem>
-          <h3>aaaa</h3>
+          <p>&emsp;&emsp;* Conheça nossas Empresas.</p>
+          <h3>Quem Somos:</h3>
+          <ButtonCollunImgFoot
+            img={home}
+            title={"Localização..."}
+            onClick={() => alert("Local.")}
+          />
         </F.AreaContentCollumItem>
       </Bar3ColunsFoot>
 
@@ -75,11 +80,61 @@ const FootLogin = () => {
       <Bar3ColunsFoot pwidth={"32%"}>
         <BarCabecalho title={"Contatos."} />
         <BarDivAreaCollunImg>
-          <ButtonCollunImgFoot img={local} title={'Localização...'} onClick={() => alert('Local.')} />
-          <ButtonCollunImgFoot img={fone} title={'Telefone...'} onClick={() => alert('Telefone.')} />
-          <ButtonCollunImgFoot img={email} title={'Email...'} onClick={() => alert('Email.')} />
-
-
+          <ButtonCollunImgFoot
+            img={local}
+            title={"Localização..."}
+            onClick={() => alert("Local.")}
+          />
+          <ButtonCollunImgFoot
+            img={fone}
+            title={"Telefone..."}
+            onClick={() => alert("Telefone.")}
+          />
+          <ButtonCollunImgFoot
+            img={celular}
+            title={"Celular..."}
+            onClick={() => alert("Celular.")}
+          />
+          <ButtonCollunImgFoot
+            img={email}
+            title={"Email..."}
+            onClick={() => alert("Email.")}
+          />
+          <ButtonCollunImgFoot
+            img={watszapp}
+            title={"Watszapp..."}
+            onClick={() => alert("Watszapp.")}
+          />
+          <ButtonCollunImgFoot
+            img={instagram}
+            title={"Instagram..."}
+            onClick={() => alert("Instagram.")}
+          />
+          <ButtonCollunImgFoot
+            img={twiter}
+            title={"Twiter..."}
+            onClick={() => alert("Twiter.")}
+          />
+          <ButtonCollunImgFoot
+            img={tiktok}
+            title={"Tiktok..."}
+            onClick={() => alert("Tiktok.")}
+          />
+          <ButtonCollunImgFoot
+            img={facebook}
+            title={"Facebook..."}
+            onClick={() => alert("Facebook.")}
+          />
+          <ButtonCollunImgFoot
+            img={telegram}
+            title={"Telegram..."}
+            onClick={() => alert("Telegram.")}
+          />
+          <ButtonCollunImgFoot
+            img={internet}
+            title={"Internet..."}
+            onClick={() => alert("Internet.")}
+          />
         </BarDivAreaCollunImg>
       </Bar3ColunsFoot>
 
@@ -94,409 +149,394 @@ const FootLogin = () => {
 };
 export default FootLogin;
 
+// <F.AreaContentCollumItem>
 
+//     <F.DivAreaImgButton>
+//       <F.ButtonImgFoot img={local} title={'local...'}/>
+//     </F.DivAreaImgButton>
 
+//     <F.DivAreaImgButton>
+//       <F.ButtonImgFoot img={fone} title={'Fones...'}/>
+//     </F.DivAreaImgButton>
 
+//     <F.DivAreaImgButton>
+//       <F.ButtonImgFoot img={email} title={'Email...'}/>
+//     </F.DivAreaImgButton>
 
-        // <F.AreaContentCollumItem>
+// </F.AreaContentCollumItem>
 
-        //     <F.DivAreaImgButton>
-        //       <F.ButtonImgFoot img={local} title={'local...'}/>
-        //     </F.DivAreaImgButton>
+//      <F.AreaContentCollumItem>
+//       <F.DivAreaCollunItem>
+//         <BarTitleCollunItem title={"Telefones:"} />
+//       </F.DivAreaCollunItem>
+//       <F.DivAreaCollunImg>
+//         <F.DivAreaImgButton>
+//           <F.ButtonImgFoot img={fone} title={'Fones...'}/>
+//         </F.DivAreaImgButton>
+//       </F.DivAreaCollunImg>
+//     </F.AreaContentCollumItem>
 
-        //     <F.DivAreaImgButton>
-        //       <F.ButtonImgFoot img={fone} title={'Fones...'}/>
-        //     </F.DivAreaImgButton>
+//     <F.AreaContentCollumItem>
+//       <F.DivAreaCollunItem>
+//         <BarTitleCollunItem title={"Email:"} />
+//       </F.DivAreaCollunItem>
 
+//    <BarColunsFoot pwidth={"32.5%"}>
+//     <BarCabecalho title={"Sobre."} />
+//     <BarAreaContent>
+//       <BarDivImgFoot
+//         heightdiv={"50px"}
+//         widthdiv={"50px"}
+//         imgdiv={home}
+//       >
+//         <h5>Quen Somos.</h5>
+//         <F.DivAreaImgButton>
+//         <F.ButtonImgFoot
+//           img={home}
+//           title="Sobre."
+//           onClick={() => {
+//             setIsSobre(true);
+//           }}
+//         />
+//         </F.DivAreaImgButton>
+//       </BarDivImgFoot>
+//       {issobre ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsSobre(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//     </BarAreaContent>
+//   </BarColunsFoot>
+//   <BarColunsFoot pwidth={"32.5%"}>
+//     <BarCabecalho title={"Contatos."} />
+//     <F.AreaContainerButton>
+//       <F.ButtonImgFoot
+//         img={local}
+//         title="Localização"
+//         onClick={() => {
+//           setIsLocal(true);
+//         }}
+//       />
+//       {islocal ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsLocal(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//     </F.AreaContainerButton>
+//   </BarColunsFoot>
 
-        //     <F.DivAreaImgButton>
-        //       <F.ButtonImgFoot img={email} title={'Email...'}/>
-        //     </F.DivAreaImgButton>
+//   <BarColunsFoot pwidth={"32.5%"}>
+//     <BarCabecalho title={"Produtos."} />
+//     <F.AreaContainerButton>
+//       <F.ButtonImgFoot
+//         height={"60px"}
+//         width={"55px"}
+//         img={b_bordado}
+//         title="Bodados"
+//         onClick={() => {
+//           setIsLocal(true);
+//         }}
+//       />
+//       {isborda ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsBorda(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//     </F.AreaContainerButton>
+//   </BarColunsFoot>
+// //</BarMainFoot>
 
+// <F.AreaContainerButton>
+//       <F.ButtonImgFoot
+//         id={"2"}
+//         img={local}
+//         title="Localização"
+//         onClick={() => {
+//           handlerClickButton("2");
+//         }}
+//       />
+//       {islocal ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsLocal(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"3"}
+//         img={fone}
+//         title="Telefone"
+//         onClick={() => {
+//           handlerClickButton("3");
+//         }}
+//       />
+//       {istelef ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsTelef(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"4"}
+//         img={email}
+//         title="Email"
+//         onClick={() => {
+//           handlerClickButton("4");
+//         }}
+//       />
+//       {isemail ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsEmail(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"5"}
+//         img={watszapp}
+//         title="Watszapp"
+//         onClick={() => {
+//           handlerClickButton("5");
+//         }}
+//       />
+//       {iswatsz ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsWatsz(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"6"}
+//         img={instagram}
+//         title="Instagram"
+//         onClick={() => {
+//           handlerClickButton("6");
+//         }}
+//       />
+//       {isinsta ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsInsta(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"7"}
+//         img={facebook1}
+//         title="Faceboock"
+//         onClick={() => {
+//           handlerClickButton("7");
+//         }}
+//       />
+//       {isfaceb ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsFaceb(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"8"}
+//         img={twiter}
+//         title="Twitter"
+//         onClick={() => {
+//           handlerClickButton("8");
+//         }}
+//       />
+//       {istwite ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsTwite(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"9"}
+//         img={tiktok}
+//         title="TikTok"
+//         onClick={() => {
+//           handlerClickButton("9");
+//         }}
+//       />
+//       {istikto ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsTikto(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"10"}
+//         img={telegram}
+//         title="Telegram"
+//         onClick={() => {
+//           handlerClickButton("10");
+//         }}
+//       />
+//       {isteleg ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsTeleg(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//       <F.ButtonImgFoot
+//         id={"11"}
+//         img={internet}
+//         title="Internet"
+//         onClick={() => {
+//           handlerClickButton("11");
+//         }}
+//       />
+//       {isinter ? (
+//         <PageModal
+//           ispx={true}
+//           ptop={"25%"}
+//           pwidth={"50%"}
+//           pheight={"50%"}
+//           titulo={"Em Acesso Negado"}
+//           onClose={() => setIsInter(false)}
+//         >
+//           <CardDesemvolver />
+//         </PageModal>
+//       ) : null}
+//     </F.AreaContainerButton>
 
-        // </F.AreaContentCollumItem>
-
-
-
-    //      <F.AreaContentCollumItem>
-    //       <F.DivAreaCollunItem>
-    //         <BarTitleCollunItem title={"Telefones:"} />
-    //       </F.DivAreaCollunItem>
-    //       <F.DivAreaCollunImg>
-    //         <F.DivAreaImgButton>
-    //           <F.ButtonImgFoot img={fone} title={'Fones...'}/>
-    //         </F.DivAreaImgButton>
-    //       </F.DivAreaCollunImg>
-    //     </F.AreaContentCollumItem>
-
-    //     <F.AreaContentCollumItem>
-    //       <F.DivAreaCollunItem>
-    //         <BarTitleCollunItem title={"Email:"} />
-    //       </F.DivAreaCollunItem>
-
-
-
-
-    //    <BarColunsFoot pwidth={"32.5%"}>
-    //     <BarCabecalho title={"Sobre."} />
-    //     <BarAreaContent>
-    //       <BarDivImgFoot
-    //         heightdiv={"50px"}
-    //         widthdiv={"50px"}
-    //         imgdiv={home}
-    //       >
-    //         <h5>Quen Somos.</h5>
-    //         <F.DivAreaImgButton>
-    //         <F.ButtonImgFoot
-    //           img={home}
-    //           title="Sobre."
-    //           onClick={() => {
-    //             setIsSobre(true);
-    //           }}
-    //         />
-    //         </F.DivAreaImgButton>
-    //       </BarDivImgFoot>
-    //       {issobre ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsSobre(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //     </BarAreaContent>
-    //   </BarColunsFoot>
-    //   <BarColunsFoot pwidth={"32.5%"}>
-    //     <BarCabecalho title={"Contatos."} />
-    //     <F.AreaContainerButton>
-    //       <F.ButtonImgFoot
-    //         img={local}
-    //         title="Localização"
-    //         onClick={() => {
-    //           setIsLocal(true);
-    //         }}
-    //       />
-    //       {islocal ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsLocal(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //     </F.AreaContainerButton>
-    //   </BarColunsFoot>
-
-    //   <BarColunsFoot pwidth={"32.5%"}>
-    //     <BarCabecalho title={"Produtos."} />
-    //     <F.AreaContainerButton>
-    //       <F.ButtonImgFoot
-    //         height={"60px"}
-    //         width={"55px"}
-    //         img={b_bordado}
-    //         title="Bodados"
-    //         onClick={() => {
-    //           setIsLocal(true);
-    //         }}
-    //       />
-    //       {isborda ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsBorda(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //     </F.AreaContainerButton>
-    //   </BarColunsFoot>
-    // //</BarMainFoot>
-
-
-    // <F.AreaContainerButton>
-    //       <F.ButtonImgFoot
-    //         id={"2"}
-    //         img={local}
-    //         title="Localização"
-    //         onClick={() => {
-    //           handlerClickButton("2");
-    //         }}
-    //       />
-    //       {islocal ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsLocal(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"3"}
-    //         img={fone}
-    //         title="Telefone"
-    //         onClick={() => {
-    //           handlerClickButton("3");
-    //         }}
-    //       />
-    //       {istelef ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsTelef(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"4"}
-    //         img={email}
-    //         title="Email"
-    //         onClick={() => {
-    //           handlerClickButton("4");
-    //         }}
-    //       />
-    //       {isemail ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsEmail(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"5"}
-    //         img={watszapp}
-    //         title="Watszapp"
-    //         onClick={() => {
-    //           handlerClickButton("5");
-    //         }}
-    //       />
-    //       {iswatsz ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsWatsz(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"6"}
-    //         img={instagram}
-    //         title="Instagram"
-    //         onClick={() => {
-    //           handlerClickButton("6");
-    //         }}
-    //       />
-    //       {isinsta ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsInsta(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"7"}
-    //         img={facebook1}
-    //         title="Faceboock"
-    //         onClick={() => {
-    //           handlerClickButton("7");
-    //         }}
-    //       />
-    //       {isfaceb ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsFaceb(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"8"}
-    //         img={twiter}
-    //         title="Twitter"
-    //         onClick={() => {
-    //           handlerClickButton("8");
-    //         }}
-    //       />
-    //       {istwite ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsTwite(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"9"}
-    //         img={tiktok}
-    //         title="TikTok"
-    //         onClick={() => {
-    //           handlerClickButton("9");
-    //         }}
-    //       />
-    //       {istikto ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsTikto(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"10"}
-    //         img={telegram}
-    //         title="Telegram"
-    //         onClick={() => {
-    //           handlerClickButton("10");
-    //         }}
-    //       />
-    //       {isteleg ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsTeleg(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //       <F.ButtonImgFoot
-    //         id={"11"}
-    //         img={internet}
-    //         title="Internet"
-    //         onClick={() => {
-    //           handlerClickButton("11");
-    //         }}
-    //       />
-    //       {isinter ? (
-    //         <PageModal
-    //           ispx={true}
-    //           ptop={"25%"}
-    //           pwidth={"50%"}
-    //           pheight={"50%"}
-    //           titulo={"Em Acesso Negado"}
-    //           onClose={() => setIsInter(false)}
-    //         >
-    //           <CardDesemvolver />
-    //         </PageModal>
-    //       ) : null}
-    //     </F.AreaContainerButton>
-
-
-
-
-        //   <F.ButtonImgFoot
-        //     height={"60px"}
-        //     width={"55px"}
-        //     id={"13"}
-        //     img={l_laser}
-        //     title="Corte Laser"
-        //     onClick={() => {
-        //       handlerClickButton("13");
-        //     }}
-        //   />
-        //   {iscorta ? (
-        //     <PageModal
-        //       ispx={true}
-        //       ptop={"25%"}
-        //       pwidth={"50%"}
-        //       pheight={"50%"}
-        //       titulo={"Em Acesso Negado"}
-        //       onClose={() => setIsCorta(false)}
-        //     >
-        //       <CardDesemvolver />
-        //     </PageModal>
-        //   ) : null}
-        //   <F.ButtonImgFoot
-        //     height={"60px"}
-        //     width={"55px"}
-        //     id={"14"}
-        //     img={g_laser}
-        //     title="Gravação Laser"
-        //     onClick={() => {
-        //       handlerClickButton("14");
-        //     }}
-        //   />
-        //   {isgrava ? (
-        //     <PageModal
-        //       ispx={true}
-        //       ptop={"25%"}
-        //       pwidth={"50%"}
-        //       pheight={"50%"}
-        //       titulo={"Em Acesso Negado"}
-        //       onClose={() => setIsGrava(false)}
-        //     >
-        //       <CardDesemvolver />
-        //     </PageModal>
-        //   ) : null}
-        //   <F.ButtonImgFoot
-        //     height={"60px"}
-        //     width={"55px"}
-        //     id={"15"}
-        //     img={d_diverso}
-        //     title="Diversos"
-        //     onClick={() => {
-        //       handlerClickButton("15");
-        //     }}
-        //   />
-        //   {isdiver ? (
-        //     <PageModal
-        //       ispx={true}
-        //       ptop={"25%"}
-        //       pwidth={"50%"}
-        //       pheight={"50%"}
-        //       titulo={"Em Acesso Negado"}
-        //       onClose={() => setIsDiver(false)}
-        //     >
-        //       <CardDesemvolver />
-        //     </PageModal>
-        //   ) : null}
-        // </F.AreaContainerButton>
+//   <F.ButtonImgFoot
+//     height={"60px"}
+//     width={"55px"}
+//     id={"13"}
+//     img={l_laser}
+//     title="Corte Laser"
+//     onClick={() => {
+//       handlerClickButton("13");
+//     }}
+//   />
+//   {iscorta ? (
+//     <PageModal
+//       ispx={true}
+//       ptop={"25%"}
+//       pwidth={"50%"}
+//       pheight={"50%"}
+//       titulo={"Em Acesso Negado"}
+//       onClose={() => setIsCorta(false)}
+//     >
+//       <CardDesemvolver />
+//     </PageModal>
+//   ) : null}
+//   <F.ButtonImgFoot
+//     height={"60px"}
+//     width={"55px"}
+//     id={"14"}
+//     img={g_laser}
+//     title="Gravação Laser"
+//     onClick={() => {
+//       handlerClickButton("14");
+//     }}
+//   />
+//   {isgrava ? (
+//     <PageModal
+//       ispx={true}
+//       ptop={"25%"}
+//       pwidth={"50%"}
+//       pheight={"50%"}
+//       titulo={"Em Acesso Negado"}
+//       onClose={() => setIsGrava(false)}
+//     >
+//       <CardDesemvolver />
+//     </PageModal>
+//   ) : null}
+//   <F.ButtonImgFoot
+//     height={"60px"}
+//     width={"55px"}
+//     id={"15"}
+//     img={d_diverso}
+//     title="Diversos"
+//     onClick={() => {
+//       handlerClickButton("15");
+//     }}
+//   />
+//   {isdiver ? (
+//     <PageModal
+//       ispx={true}
+//       ptop={"25%"}
+//       pwidth={"50%"}
+//       pheight={"50%"}
+//       titulo={"Em Acesso Negado"}
+//       onClose={() => setIsDiver(false)}
+//     >
+//       <CardDesemvolver />
+//     </PageModal>
+//   ) : null}
+// </F.AreaContainerButton>
 
 // type CharOpc =
 //     'Sobre'|
@@ -539,6 +579,3 @@ export default FootLogin;
 //     Corte: { item: 13, descr: 'Cortes', onoff: false },
 //     Grava: { item: 14, descr: 'Gravação', onoff: false },
 //     Diversos: { item: 15, descr: 'Diversos', onoff: false }
-
-
-
