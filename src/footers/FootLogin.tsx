@@ -21,7 +21,7 @@ import internet from "../assets/svgs/internet.svg";
 //import BarCabecalho from "./BarCabecalho";
 import BarMainFoot from "./BarMainFoot";
 import Bar3ColunsFoot from "./Bar3ColunsFoot";
-import BarCabecalho from "./BarCabecalho";
+import BarAga4Foot from "./BarAga4Foot";
 import BarDivAreaCollunImg from "./BarDivAreaCollunImg";
 import ButtonCollunImgFoot from "./ButtonCollunImgFoot";
 
@@ -63,7 +63,7 @@ const FootLogin = () => {
   return (
     <BarMainFoot>
       <Bar3ColunsFoot pwidth={"32%"}>
-        <BarCabecalho title={"Sobre."} />
+        <BarAga4Foot title={"Sobre."} />
         <F.AreaContentCollumItem>
           <p>&emsp;&emsp;* Conheça nossas Empresas.</p>
           <h3>Quem Somos:</h3>
@@ -80,7 +80,7 @@ const FootLogin = () => {
       <F.DivisionVPanel />
 
       <Bar3ColunsFoot pwidth={"32%"}>
-        <BarCabecalho title={"Contatos."} />
+        <BarAga4Foot title={"Contatos."} />
         <BarDivAreaCollunImg>
           <ButtonCollunImgFoot
             img={local}
@@ -143,7 +143,7 @@ const FootLogin = () => {
       <F.DivisionVPanel />
 
       <Bar3ColunsFoot pwidth={"32%"}>
-        <BarCabecalho title={"Produtos."} />
+        <BarAga4Foot title={"Produtos."} />
         <h3>ccc</h3>
       </Bar3ColunsFoot>
     </BarMainFoot>
