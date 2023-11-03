@@ -76,12 +76,19 @@ export const AreaContainer = styled.div`
   }
   select {
     /* border: 2px double #7f7fbb; */
-    border: 3px double #8d8fad;
+    border: 3px double;
+    border-color: #8d8fad;
     border-radius: 5px;
     font-weight: bold;
     width: 94px;
     color: #000000;
     cursor: pointer;
+    :hover {
+      border-color: #ffff00;// amarelo
+    }
+    :active {
+      border-color: #ff0000;// amarelo
+    }
   }
 `;
 
@@ -100,6 +107,24 @@ color: #000000;
 ////////////////////////////////////////////
 /** Content da Area de cada coluna foot */
 ////////////////////////////////////////////
+/**          colun Default                */
+type Props3Collun = {
+  pwidth?: string;
+ };
+export const Area3Collun = styled.div<Props3Collun>`
+  border: 2px solid ;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 0px 0px 0px 0px;
+  margin: 2px 0px 2px 0px;
+  width: ${({ pwidth }) => pwidth || '33%'};
+  background: #a7e6fa;
+  display: flex;
+  flex-flow: wrap;
+  color: #000000;
+`;
+
+/**          colun dev login                */
 type PropsEmp3Collun = {
   pwidth?: string;
  };
@@ -118,22 +143,6 @@ export const Area3EmpCollun = styled.div<PropsEmp3Collun>`
   @media screen and (min-width: 110px) {
     width: 150px;
    }
-`;
-
-type Props3Collun = {
-  pwidth?: string;
- };
-export const Area3Collun = styled.div<Props3Collun>`
-  border: 2px solid ;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  padding: 0px 0px 0px 0px;
-  margin: 2px 0px 2px 0px;
-  width: ${({ pwidth }) => pwidth || '25%'};
-  background: #a7e6fa;
-  display: flex;
-  flex-flow: wrap;
-  color: #000000;
 `;
 
 type PropsContac3Collun = {

@@ -26,23 +26,28 @@ export const Content = styled.div`
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5 {
     margin: 2px 2px 2px 4px;
     padding: 2px 2px 2px 2px;
     font-style: normal;
-    text-decoration-color: #fff;
+    text-decoration-color: #000000;
   }
   h1 {
     text-decoration: 3px underline;
+    //text-decoration-color: #000000;
   }
   h2 {
     text-decoration: 2px underline;
+    //text-decoration-color: #000000;
   }
   h3 {
     text-decoration: 1.5px underline;
+    //text-decoration-color: #000000;
   }
   h4 {
     text-decoration: 1px underline;
+    //text-decoration-color: #000000;
   }
   li {
     list-style-type: none;
@@ -63,7 +68,8 @@ type PropsMain = {
   onClick?: () => void;
 };
 export const ContainerModal = styled.div<PropsMain>`
-  border: 2px #727272 solid;
+  border: 2px solid;
+  border-color: #727272;
   padding: 0px 0px 0px 0px;
   margin: 0px 10px 0px 10px;
   color: #000000;
@@ -149,7 +155,9 @@ type PropsImg = {
   onClick?: () => void;
 };
 export const ContainerModalImg = styled.div<PropsImg>`
-  border: 6px silver groove ;
+  border: 6px groove ;
+  border-color: #b5b5b5;
+  border-radius: 10px;
   padding: 0px 0px 0px 0px;
   margin: 5px 10px 5px 10px;
   min-height: ${({ pminheight }) => pminheight || '27%'};// min-height: 130px;
@@ -249,7 +257,7 @@ export const ContainerButtonModal = styled.div`
   font-size: 12px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
-  color: #ffffff;
+  color: #000000;
 `;
 
 export const ButtonModalImg = styled.button<{ img?: string }>`

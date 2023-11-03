@@ -5,7 +5,7 @@ import ContainerItensHeaderMain from "./ContainerItensMain";
 import BarHeaderLogin from "./BarHearderLogin";
 
 type PropsHeader = {
-  loginonoff: boolean;
+  loginonoff?: boolean;
 };
 const HeaderLogo = ({ loginonoff }: PropsHeader) => {
   return (

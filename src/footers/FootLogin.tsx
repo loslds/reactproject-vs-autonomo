@@ -17,23 +17,17 @@ import telegram from "../assets/svgs/telegram.svg";
 import internet from "../assets/svgs/internet.svg";
 
 //import { useNavigate } from 'react-router-dom';
-
 import BarMainFoot from "./BarMainFoot";
+import BarEmp3ColunsFoot from "./BarEmp3ColunsFoot";
 import BarContac3ColunsFoot from "./BarContac3ColunsFoot";
 import BarProd3ColunsFoot from "./BarProd3ColunsFoot";
+import BarProdMainFoot from "./BarProdMainFoot";
+
+import BarReaderItemFoot from "./BarReaderItemFoot";
 import BarTextoFoot from "./BarTextoFoot";
+// <F.AreaContentCollumItem />
 import BarDivAreaCollunImg from "./BarDivAreaCollunImg";
 import ButtonCollunImgFoot from "./ButtonCollunImgFoot";
-import BarProdMainFoot from "./BarProdMainFoot";
-import BarReaderItemFoot from "./BarReaderItemFoot";
-import BarEmp3ColunsFoot from "./BarEmp3ColunsFoot";
-
-// import BarTitleCollunItem from "./BarTitleCollunIten";
-
-//import BarColunsFoot from "./BarColunsFoot";
-//import BarAreaContent from "./BarAreaContentFoot";
-//import BarDivImgFoot from "./BarDivImgFoot";
-//import BarDivImgFoot from "./BarDivImgFoot";
 
 /////////// Produtos ...............
 //import b_bordado from "../assets/svgs/b_bordado.svg";
@@ -169,6 +163,9 @@ const FootLogin = () => {
           </BarProdMainFoot>
         </F.AreaContentCollumItem>
       </BarProd3ColunsFoot>
+
+
+      <F.DivisionVPanel />
     </BarMainFoot>
   );
 };

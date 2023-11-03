@@ -104,8 +104,8 @@ export const ContainerHLogo = styled.div`
   p {
     margin: 0 0 0 20px;
     font-size: 14px;
-    color: #b8b8d4;
-  }
+    /* color: #b8b8d4;*/
+    }
  `;
 
 export const ContainerHPanelMain = styled.div`
@@ -127,7 +127,7 @@ export const ContainerHPanelMain = styled.div`
   p {
     margin: 0 0 0 20px;
     font-size: 14px;
-    color: #b8b8d4;
+    /* color: #b8b8d4; */
   }
 `;
 

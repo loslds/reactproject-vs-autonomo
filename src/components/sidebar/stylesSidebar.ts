@@ -62,7 +62,7 @@ export const ContainerItensModulo = styled.div<PropsItensModulo>`
 export const ContainerSideButton = styled.div`
   border: 2px red;
   border-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 0px 0px 0px 0px;
   margin: 2px 2px 2px 2px;
   background: transparent;

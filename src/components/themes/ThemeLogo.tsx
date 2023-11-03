@@ -10,9 +10,9 @@ export const ThemeLogo = ({ children }: PropsThemeLogo) => {
   return (
     <L.ContainerLogoMain>
       <L.ContainerLogoMainFlex>
-        <HeaderLogo loginonoff={false} />
+        <HeaderLogo />
         <L.DivisionHPanel />
-        <BarSideMenu /> {/* loginonoff={true} /> */}
+        <BarSideMenu />
         <L.DivisionHPanel />
         <L.ContainerPage>{children}</L.ContainerPage>
         <L.DivisionHPanel />

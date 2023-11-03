@@ -56,27 +56,27 @@ export const ContainerLogoMain = styled.div`
   h1 {
     line-height: 30px;
     font-size: 28px;
-    color: #ffffff;
+    //color: #ffffff;
   }
   h2 {
     line-height: 26px;
     font-size: 24px;
-    color: #ffffff;
+    //color: #ffffff;
   }
   h3 {
     line-height: 22px;
     font-size: 20px;
-    color: #ffffff;
+    //color: #ffffff;
   }
   h4 {
     line-height: 20px;
     font-size: 18px;
-    color: #ffffff;
+    //color: #ffffff;
   }
   h5 {
     line-height: 18px;
     font-size: 16px;
-    color: #ffffff;
+    //color: #ffffff;
   }
   li {
     list-style-type: none;
@@ -85,16 +85,17 @@ export const ContainerLogoMain = styled.div`
   p {
     margin: 0px 5px 0px 5px;
     font-size: 14px;
-    color: #ffffff;
+    //color: #ffffff;
   }
   label {
     padding: 0px 10px 0px 10px;
     /* color: #b8b8d4; */
-    color: #ffffff;
+    //color: #ffffff;
     line-height: 20px;
     font-weight: bold;
     font-size: 18x;
   }
+
 `;
 //////////////////////////////////////////////////////
 // contente da Area do theme
