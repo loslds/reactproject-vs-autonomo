@@ -1,50 +1,54 @@
+import React from "react";
 import * as L from "./stylespg";
 
 import { ThemeLogo } from "../components/themes";
-//import { AcessoActions, AcessoUseForm } from '../components/contexts/AcessoContext';
+import { AcessoActions } from "../components/contexts/AcessoContext";
+import { AcessoUseForm } from "../components/contexts/AcessoContext";
 
 export const Loginpg = () => {
+  const { dispatch } = AcessoUseForm();
 
-//  const { state, dispatch } = AcessoUseForm();
+  React.useEffect(() => {
+    dispatch({ type: AcessoActions.setCurrentStep, payload: 0 });
+    dispatch({ type: AcessoActions.setIdAces, payload: 0 });
+    dispatch({ type: AcessoActions.setIdEmp, payload: 0 });
+    dispatch({ type: AcessoActions.setNmFant, payload: "" });
+    dispatch({ type: AcessoActions.setIdUser, payload: 0 });
+    dispatch({ type: AcessoActions.setIdNmUser, payload: "" });
+    dispatch({ type: AcessoActions.setPswUser, payload: "" });
+    dispatch({ type: AcessoActions.setPin, payload: "" });
+    dispatch({ type: AcessoActions.setMail, payload: "" });
+    dispatch({ type: AcessoActions.setFoneC, payload: "" });
+    dispatch({ type: AcessoActions.setNet, payload: "" });
+    dispatch({ type: AcessoActions.setIdMod, payload: 0 });
+    dispatch({ type: AcessoActions.setNmMod, payload: "" });
+    dispatch({ type: AcessoActions.setNmRecep, payload: "Recepção" });
+    dispatch({ type: AcessoActions.setMdRecep, payload: false });
+    dispatch({ type: AcessoActions.setNmDesig, payload: "Design" });
+    dispatch({ type: AcessoActions.setMdDesig, payload: false });
+    dispatch({ type: AcessoActions.setNmProdu, payload: "Produção" });
+    dispatch({ type: AcessoActions.setMdProdu, payload: false });
+    dispatch({ type: AcessoActions.setNmAcaba, payload: "Acabamento" });
+    dispatch({ type: AcessoActions.setMdAcaba, payload: false });
+    dispatch({ type: AcessoActions.setNmExped, payload: "Expedição" });
+    dispatch({ type: AcessoActions.setMdExped, payload: false });
+    dispatch({ type: AcessoActions.setNmAdmin, payload: "Administração" });
+    dispatch({ type: AcessoActions.setMdAdmin, payload: false });
+    dispatch({ type: AcessoActions.setNmMaster, payload: "Master" });
+    dispatch({ type: AcessoActions.setMdMaster, payload: false });
+    dispatch({ type: AcessoActions.setNmConfig, payload: "" });
+    dispatch({ type: AcessoActions.setMdConfig, payload: false });
+    dispatch({ type: AcessoActions.setPinAdm, payload: 9999 });
+    dispatch({ type: AcessoActions.setPathPage, payload: "" });
+    dispatch({ type: AcessoActions.setLogado, payload: false });
+    dispatch({ type: AcessoActions.setDtIni, payload: "" });
+    dispatch({ type: AcessoActions.setDtFim, payload: "" });
+    dispatch({ type: AcessoActions.setTmp, payload: "" });
+  }, [dispatch]);
 
-  //               // React.useEffect(() => {
-//   dispatch({ type: AcessoActions.setIdAces, payload: idacesso });
-//   // dispatch({ type: AcessoActions.setIdEmp, payload: 0 });
-//   dispatch({ type: AcessoActions.setNmFant, payload: nmusuario });
-//   dispatch({ type: AcessoActions.setIdUser, payload: iduser });
-//   // dispatch({ type: AcessoActions.setIdNmUser, payload: '' });
-//   // dispatch({ type: AcessoActions.setPswUser, payload: '' });
-//   dispatch({ type: AcessoActions.setPin, payload: pinusuario });
-//   dispatch({ type: AcessoActions.setMail, payload: mailusuario });
-//   dispatch({ type: AcessoActions.setFoneC, payload: cellusuario });
-//   dispatch({ type: AcessoActions.setLvMod, payload: nvmodusuario });
-//   // dispatch({ type: AcessoActions.setNmRecep, payload: '' });
-//   dispatch({ type: AcessoActions.setMdRecep, payload: mdreceusuario });
-//   // dispatch({ type: AcessoActions.setNmDesig, payload: '' });
-//   dispatch({ type: AcessoActions.setMdDesig, payload: mddesiusuario });
-//   // dispatch({ type: AcessoActions.setNmProdu, payload: '' });
-//   dispatch({ type: AcessoActions.setMdProdu, payload: mdprodusuario });
-//   // dispatch({ type: AcessoActions.setNmAcaba, payload: '' });
-//   dispatch({ type: AcessoActions.setMdAcaba, payload: mdacabusuario });
-//   // dispatch({ type: AcessoActions.setNmExped, payload: ''});
-//   dispatch({ type: AcessoActions.setMdExped, payload: mdexpeusuario });
-//   // dispatch({ type: AcessoActions.setNmAdmin, payload: '' });
-//   dispatch({ type: AcessoActions.setMdAdmin, payload: mdadmiusuario });
-//   // dispatch({ type: AcessoActions.setNmAdmin, payload: '' });
-//   dispatch({ type: AcessoActions.setMdMaster, payload: mdmastusuario });
-//   // dispatch({ type: AcessoActions.setNmMaster, payload: '' });
-//   dispatch({ type: AcessoActions.setMdConfig, payload: mdconfigusuario });
-//   // dispatch({ type: AcessoActions.setNmConfig, payload: '' });
-//   dispatch({ type: AcessoActions.setPinAdm, payload: pinmaster });
-//   // dispatch({ type: AcessoActions.setPinAdm, payload: 1234 });
-//   dispatch({ type: AcessoActions.setAcessoPg, payload: titlepagina });
-
-//   dispatch({ type: AcessoActions.setLogado, payload: logado });
-//   dispatch({ type: AcessoActions.setDtIni, payload: logoonsys });
-//   // dispatch({ type: AcessoActions.setDtFim, payload: '' });
-//   // dispatch({ type: AcessoActions.setTmp, payload: '' });
-// // }, [dispatch]);
-
+  // net: 0,
+  // lvMod: 0,
+  //
   return (
     <ThemeLogo>
       <L.Container>
@@ -106,6 +110,7 @@ export const Loginpg = () => {
           click sobre ele.
         </p>
         <br />
+        <button>Logar</button>
       </L.Container>
     </ThemeLogo>
   );

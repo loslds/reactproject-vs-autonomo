@@ -1,0 +1,1 @@
+export { AcessoContext } from './AcessoContext';

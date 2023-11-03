@@ -12,7 +12,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { AcessoProvider } from "./components/contexts/AcessoContext.tsx";
+import { AcessoProvider } from "./components/contexts/AcessoContext.jsx";
 
 import Erropg from "./pages/Erropg.tsx";
 import { Loginpg } from "./pages/Loginpg.tsx";
@@ -29,8 +29,8 @@ import Administracaopg from './pages/Administracaopg.tsx';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-export const router = createBrowserRouter([
-  {
+export const router = createBrowserRouter(
+  [{
     path: "/",
     element: <Loginpg />,
     errorElement: <Erropg />,
@@ -45,9 +45,11 @@ export const router = createBrowserRouter([
       { path: '/acabamentopg', element: <Acabamentopg />},
       { path: '/expedicaopg', element: <Expedicaopg />},
       { path: '/administracaog', element: <Administracaopg />},
-    ],
+      ],
   },
-]);
+
+]
+);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

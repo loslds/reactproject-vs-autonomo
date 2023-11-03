@@ -24,7 +24,7 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
   //     navigate(path);
   //   };
   // };
-  
+
   const quemsou = "";
   const [ismodalqsou, setIsModalQSou] = React.useState(false);
   const [ismodalnotlogin, setIsModalNotLogin] = React.useState(false);
@@ -32,7 +32,15 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
   return (
     <H.BarContainerHRigth>
       <label>Login...: </label>
-      {logado ? (
+      {!logado ? (
+        <H.ButtonHLogin
+          img={loginoff}
+          title={"Click para Logar..."}
+          onClick={() => {
+            setIsModalNotLogin(true);
+          }}
+        />
+      ) : (
         <H.ButtonHLogin
           img={loginon}
           title={"Quem sou ..."}
@@ -40,11 +48,6 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
             setIsModalQSou(true);
           }}
         />
-      ) : (
-        <H.ButtonHLogin
-          img={loginoff}
-          title={"Click para Logar..."}
-          onClick={ () => { setIsModalNotLogin(true)}}/>
       )}
       {ismodalqsou ? (
         <PageModal
@@ -57,19 +60,19 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
         >
           <CardTxtQuemSouUser img={avatar} />
         </PageModal>
-      ) : null }
+      ) : null}
       {ismodalnotlogin ? (
         <PageModal
           ispx={true}
-          ptop={'25%'}
-          pwidth={'50%'}
-          pheight={'50%'}
-          titulo={'Acesso ao Sistema.'}
+          ptop={"25%"}
+          pwidth={"50%"}
+          pheight={"50%"}
+          titulo={"Acesso ao Sistema."}
           onClose={() => setIsModalNotLogin(false)}
         >
           <CardAcessoSistema />
         </PageModal>
-      ): null}
+      ) : null}
     </H.BarContainerHRigth>
   );
 };

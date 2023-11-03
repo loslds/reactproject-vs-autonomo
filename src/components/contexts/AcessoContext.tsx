@@ -1,18 +1,19 @@
-import React from "react";
+import React, { createContext, useReducer } from "react";
 
-type StateAcesso = {
-  correntStep: number;
-  idacesso: string;
-  idemp: string;
+export type StateAcesso = {
+  correntstep: number;
+  idacesso: number;
+  idemp: number;
   nmfant: string;
-  iduser: string;
+  iduser: number;
   idnmuser: string;
   pswuser: string;
   pin: string;
   mail: string;
   fonec: string;
-  net: string;
-  lvMod: string;
+  net: number;
+  idmod: number;
+  nmmod: string;
   mdRecep: boolean;
   nmRecep: string;
   mdDesig: boolean;
@@ -29,49 +30,50 @@ type StateAcesso = {
   nmMaster: string;
   mdConfig: boolean;
   nmConfig: string;
-  pinAdm: string;
-  page: string;
+  pinAdm: number;
+  pathpage: string;
   logado: boolean;
   datetimei: string;
   datetimef: string;
   tempo: string;
 };
 
-export const initialDataAcesso: StateAcesso = {
-  correntStep: 0 | 1 | 2 | 3 | 4,
-  idacesso: "0",
-  idemp: "0",
-  nmfant: "",
-  iduser: "0",
-  idnmuser: "",
-  pswuser: "",
-  pin: "",
-  mail: "",
-  fonec: "",
-  net: "0",
-  lvMod: "0",
+const initialData: StateAcesso = {
+  correntstep: 0,
+  idacesso: 0,
+  idemp: 0,
+  nmfant: " ",
+  iduser: 0,
+  idnmuser: " ",
+  pswuser: " ",
+  pin: " ",
+  mail: " ",
+  fonec: " ",
+  net: 0,
+  idmod: 0,
+  nmmod: "",
   mdRecep: false,
-  nmRecep: "Recepção",
+  nmRecep: " ",
   mdDesig: false,
-  nmDesig: "Design",
+  nmDesig: " ",
   mdProdu: false,
-  nmProdu: "Produção",
+  nmProdu: " ",
   mdAcaba: false,
-  nmAcaba: "Acabamento",
+  nmAcaba: " ",
   mdExped: false,
-  nmExped: "Expedição",
+  nmExped: " ",
   mdAdmin: false,
-  nmAdmin: "Administração",
+  nmAdmin: " ",
   mdMaster: false,
-  nmMaster: "Master",
+  nmMaster: " ",
   mdConfig: false,
-  nmConfig: "Config",
-  pinAdm: "9999",
-  page: "",
+  nmConfig: " ",
+  pinAdm: 0,
+  pathpage: " ",
   logado: false,
-  datetimei: "",
-  datetimef: "",
-  tempo: "",
+  datetimei: " ",
+  datetimef: " ",
+  tempo: " ",
 };
 
 // Reducer
@@ -87,7 +89,8 @@ export enum AcessoActions {
   setMail,
   setFoneC,
   setNet,
-  setLvMod,
+  setIdMod,
+  setNmMod,
   setMdRecep,
   setNmRecep,
   setMdDesig,
@@ -105,29 +108,21 @@ export enum AcessoActions {
   setMdConfig,
   setNmConfig,
   setPinAdm,
-  setPage,
+  setPathPage,
   setLogado,
   setDtIni,
   setDtFim,
   setTmp,
 }
-// Context
-type AcessoContextType = {
-  state: StateAcesso;
-  dispatch: (action: AcessoAction) => void;
-};
-const AcessoContext = React.createContext<AcessoContextType | undefined>(
-  undefined
-);
 
 type AcessoAction = {
   type: AcessoActions;
-  payload: string | number;
+  payload: any;
 };
 const AcessoReducer = (state: StateAcesso, action: AcessoAction) => {
   switch (action.type) {
     case AcessoActions.setCurrentStep:
-      return { ...state, currentStep: action.payload };
+      return { ...state, currentstep: action.payload };
     case AcessoActions.setIdAces:
       return { ...state, idacesso: action.payload };
     case AcessoActions.setIdEmp:
@@ -148,10 +143,12 @@ const AcessoReducer = (state: StateAcesso, action: AcessoAction) => {
       return { ...state, fonec: action.payload };
     case AcessoActions.setNet:
       return { ...state, net: action.payload };
-    case AcessoActions.setLvMod:
-      return { ...state, lvMod: action.payload };
+    case AcessoActions.setIdMod:
+      return { ...state, idmod: action.payload };
+    case AcessoActions.setNmMod:
+      return { ...state, nmmod: action.payload };
     case AcessoActions.setMdRecep:
-      return { ...state, ndrecep: action.payload };
+      return { ...state, mdrecep: action.payload };
     case AcessoActions.setNmRecep:
       return { ...state, nmrecep: action.payload };
     case AcessoActions.setMdDesig:
@@ -184,8 +181,8 @@ const AcessoReducer = (state: StateAcesso, action: AcessoAction) => {
       return { ...state, nmconfig: action.payload };
     case AcessoActions.setPinAdm:
       return { ...state, pinadm: action.payload };
-    case AcessoActions.setPage:
-      return { ...state, page: action.payload };
+    case AcessoActions.setPathPage:
+      return { ...state, pathpage: action.payload };
     case AcessoActions.setLogado:
       return { ...state, logado: action.payload };
     case AcessoActions.setDtIni:
@@ -198,15 +195,22 @@ const AcessoReducer = (state: StateAcesso, action: AcessoAction) => {
       return state;
   }
 };
+// Context
+type AcessoContextType = {
+  state: StateAcesso;
+  dispatch: (action: AcessoAction) => void;
+};
+export const AcessoContext = createContext<AcessoContextType | undefined>(
+  undefined
+);
+
 // Provider
 type AcessoProviderProps = {
   children: React.ReactNode;
 };
 export const AcessoProvider = ({ children }: AcessoProviderProps) => {
-  const [state, dispatch] = React.useReducer(AcessoReducer, initialDataAcesso);
-
+  const [state, dispatch] = useReducer(AcessoReducer, initialData);
   const value = { state, dispatch };
-
   return (
     <AcessoContext.Provider value={value}>{children}</AcessoContext.Provider>
   );
