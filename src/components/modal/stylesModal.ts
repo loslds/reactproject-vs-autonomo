@@ -147,7 +147,6 @@ export const ContainerModalTexto = styled.div`
 `;
 
 type PropsImg = {
-  ispx?: boolean;
   ptop?: string;
   pminheight?: string;
   pwidth?: string;

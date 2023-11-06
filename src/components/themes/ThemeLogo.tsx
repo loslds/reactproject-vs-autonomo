@@ -1,7 +1,7 @@
 import * as L from "./stylesTheme";
 import HeaderLogo from "../headers/HeaderLogo";
 import BarSideMenu from "../sidebar/BarSideMenuLogin";
-import FootLogin from "../../footers/FootLogin";
+import FootLogin from "../footers/FootLogin";
 
 type PropsThemeLogo = {
   children: React.ReactNode;

@@ -8,14 +8,10 @@ type PropsHeader = {
   loginonoff?: boolean;
 };
 const HeaderLogo = ({ loginonoff }: PropsHeader) => {
-
-
-
   return (
     <ContainerHeaderMain>
       <ContainerItensHeaderMain>
         <H.ContainerLogoSys
-          oncursor={true}
           img={LogoSys}
           onClick={() => window.location.reload()}
         />

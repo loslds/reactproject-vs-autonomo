@@ -1,4 +1,7 @@
 import React from "react";
+
+import { useNavigate } from "react-router-dom";
+
 import * as L from "./stylespg";
 
 import { ThemeLogo } from "../components/themes";
@@ -6,7 +9,17 @@ import { AcessoActions } from "../components/contexts/AcessoContext";
 import { AcessoUseForm } from "../components/contexts/AcessoContext";
 
 export const Loginpg = () => {
-  const { dispatch } = AcessoUseForm();
+  const [ispathpg, setIsPathPg] = React.useState("");
+
+  const { state, dispatch } = AcessoUseForm();
+
+  const navigate = useNavigate();
+
+  const goto = (path: string) => {
+    return () => {
+      navigate(path);
+    };
+  };
 
   React.useEffect(() => {
     dispatch({ type: AcessoActions.setCurrentStep, payload: 0 });
@@ -46,18 +59,24 @@ export const Loginpg = () => {
     dispatch({ type: AcessoActions.setTmp, payload: "" });
   }, [dispatch]);
 
-  // net: 0,
-  // lvMod: 0,
-  //
+  const handlerGetPath = () => {
+    console.log("IsPathPg", ispathpg);
+    setIsPathPg("/loginpg1");
+    dispatch({ type: AcessoActions.setPathPage, payload: ispathpg });
+    goto("/loginpg1");
+  };
+
   return (
     <ThemeLogo>
       <L.Container>
         <L.ContainerMenuPage>
           <h2>Bem Vindo...</h2>
           <h4>Abaixo você tera uma prévia da apresentação do Sistema.</h4>
+          <p>Step: {state.correntstep}/4.</p>
         </L.ContainerMenuPage>
         <L.DivisionHPanel />
         <h3>Sintese :</h3>
+        <br />
         <p>
           {"   "}&emsp;&emsp;Se você não conhece o que temos para lhe
           apresentar, antes de acessar procure conhecer todas as informações que
@@ -110,7 +129,9 @@ export const Loginpg = () => {
           click sobre ele.
         </p>
         <br />
-        <button>Logar</button>
+        <button title={"Logar..."} onClick={handlerGetPath}>
+          Logar
+        </button>
       </L.Container>
     </ThemeLogo>
   );

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import semimg from '../assets/svgs/semimg.svg'
+import semimg from '../../assets/svgs/semimg.svg'
 
 ////////////////////////////////////////////
 /** Content do foot */
@@ -83,12 +83,6 @@ export const AreaContainer = styled.div`
     width: 94px;
     color: #000000;
     cursor: pointer;
-    :hover {
-      border-color: #ffff00;// amarelo
-    }
-    :active {
-      border-color: #ff0000;// amarelo
-    }
   }
 `;
 

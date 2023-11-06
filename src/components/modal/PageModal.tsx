@@ -23,7 +23,7 @@ type PropsModalHlp = {
   onClose?: () => void;
 };
 const PageModal = ({
-  ispx,
+
   ptop,
   pwidth,
   pheight,
@@ -34,11 +34,10 @@ const PageModal = ({
   return (
     <M.Content>
       <M.ContainerModal
-        ispx={ispx}
         ptop={ptop}
         pwidth={pwidth}
         pheight={pheight}
-        
+
       >
         <CardModal>
           <TitleModal titulo={titulo} />

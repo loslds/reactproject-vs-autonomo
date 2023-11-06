@@ -24,7 +24,6 @@ export const DivHeardLogo = styled.div<{bd_color?: string }>`
 `;
 type PropsImgSys = {
   img?: string;
-  oncursor?: boolean;
   onClick?: () => void;
 };
 export const ContainerLogoSys = styled.div<PropsImgSys>`
@@ -36,7 +35,7 @@ export const ContainerLogoSys = styled.div<PropsImgSys>`
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url(${({ img }) => img || semimg});
-  cursor: ${props => (props.oncursor ? 'pointer' : 'default')};
+  cursor: pointer;
   width: 100px;
   height: 40px;
   display: flex;

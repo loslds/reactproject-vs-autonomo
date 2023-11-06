@@ -2,19 +2,19 @@
 import * as F from "./stylesfoot";
 
 /////////// sobre ...............
-import home from "../assets/svgs/home.svg";
+import home from "../../assets/svgs/home.svg";
 /////////// contatos ...............
-import local from "../assets/svgs/local.svg";
-import fone from "../assets/svgs/telefone.svg";
-import celular from "../assets/svgs/Celular.svg";
-import email from "../assets/svgs/email.svg";
-import watszapp from "../assets/svgs/watszapp.svg";
-import instagram from "../assets/svgs/instagran.svg";
-import twiter from "../assets/svgs/twiter.svg";
-import tiktok from "../assets/svgs/tiktok.svg";
-import facebook from "../assets/svgs/facebook.svg";
-import telegram from "../assets/svgs/telegram.svg";
-import internet from "../assets/svgs/internet.svg";
+import local from "../../assets/svgs/local.svg";
+import fone from "../../assets/svgs/telefone.svg";
+import celular from "../../assets/svgs/Celular.svg";
+import email from "../../assets/svgs/email.svg";
+import watszapp from "../../assets/svgs/watszapp.svg";
+import instagram from "../../assets/svgs/instagran.svg";
+import twiter from "../../assets/svgs/twiter.svg";
+import tiktok from "../../assets/svgs/tiktok.svg";
+import facebook from "../../assets/svgs/facebook.svg";
+import telegram from "../../assets/svgs/telegram.svg";
+import internet from "../../assets/svgs/internet.svg";
 
 //import { useNavigate } from 'react-router-dom';
 import BarMainFoot from "./BarMainFoot";
@@ -163,7 +163,6 @@ const FootLogin = () => {
           </BarProdMainFoot>
         </F.AreaContentCollumItem>
       </BarProd3ColunsFoot>
-
 
       <F.DivisionVPanel />
     </BarMainFoot>

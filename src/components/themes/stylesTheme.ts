@@ -84,7 +84,7 @@ export const ContainerLogoMain = styled.div`
   }
   p {
     margin: 0px 5px 0px 5px;
-    font-size: 14px;
+    font-size: 16px;
     //color: #ffffff;
   }
   label {
@@ -95,7 +95,12 @@ export const ContainerLogoMain = styled.div`
     font-weight: bold;
     font-size: 18x;
   }
-
+  /* button {
+    border: 3px double;
+    border-color: #9899ba;
+    border-radius: 10px;
+    //background-color: #d7d7e3;
+  } */
 `;
 //////////////////////////////////////////////////////
 // contente da Area do theme
