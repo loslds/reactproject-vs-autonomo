@@ -1,7 +1,7 @@
-import React, { createContext, useReducer } from "react";
+import React from "react";
 
-export type StateAcesso = {
-  correntstep: number;
+export type StateAcces = {
+  currentstep: number;
   idacesso: number;
   idemp: number;
   nmfant: string;
@@ -38,8 +38,8 @@ export type StateAcesso = {
   tempo: string;
 };
 
-const initialData: StateAcesso = {
-  correntstep: 0,
+const initialData: StateAcces = {
+  currentstep: 0,
   idacesso: 0,
   idemp: 0,
   nmfant: " ",
@@ -77,7 +77,7 @@ const initialData: StateAcesso = {
 };
 
 // Reducer
-export enum AcessoActions {
+export enum AccesActions {
   setCurrentStep,
   setIdAces,
   setIdEmp,
@@ -115,114 +115,115 @@ export enum AcessoActions {
   setTmp,
 }
 
-type AcessoAction = {
-  type: AcessoActions;
+type AccesAction = {
+  type: AccesActions;
   payload: any;
 };
-const AcessoReducer = (state: StateAcesso, action: AcessoAction) => {
+export const AccesReducer = (state: StateAcces, action: AccesAction) => {
   switch (action.type) {
-    case AcessoActions.setCurrentStep:
+    case AccesActions.setCurrentStep:
       return { ...state, currentstep: action.payload };
-    case AcessoActions.setIdAces:
+    case AccesActions.setIdAces:
       return { ...state, idacesso: action.payload };
-    case AcessoActions.setIdEmp:
+    case AccesActions.setIdEmp:
       return { ...state, idemp: action.payload };
-    case AcessoActions.setNmFant:
+    case AccesActions.setNmFant:
       return { ...state, nmfant: action.payload };
-    case AcessoActions.setIdUser:
+    case AccesActions.setIdUser:
       return { ...state, iduser: action.payload };
-    case AcessoActions.setIdNmUser:
+    case AccesActions.setIdNmUser:
       return { ...state, idnmuser: action.payload };
-    case AcessoActions.setPswUser:
+    case AccesActions.setPswUser:
       return { ...state, pswuser: action.payload };
-    case AcessoActions.setPin:
+    case AccesActions.setPin:
       return { ...state, pin: action.payload };
-    case AcessoActions.setMail:
+    case AccesActions.setMail:
       return { ...state, mail: action.payload };
-    case AcessoActions.setFoneC:
+    case AccesActions.setFoneC:
       return { ...state, fonec: action.payload };
-    case AcessoActions.setNet:
+    case AccesActions.setNet:
       return { ...state, net: action.payload };
-    case AcessoActions.setIdMod:
+    case AccesActions.setIdMod:
       return { ...state, idmod: action.payload };
-    case AcessoActions.setNmMod:
+    case AccesActions.setNmMod:
       return { ...state, nmmod: action.payload };
-    case AcessoActions.setMdRecep:
+    case AccesActions.setMdRecep:
       return { ...state, mdrecep: action.payload };
-    case AcessoActions.setNmRecep:
+    case AccesActions.setNmRecep:
       return { ...state, nmrecep: action.payload };
-    case AcessoActions.setMdDesig:
+    case AccesActions.setMdDesig:
       return { ...state, mddesig: action.payload };
-    case AcessoActions.setNmDesig:
+    case AccesActions.setNmDesig:
       return { ...state, nmdesig: action.payload };
-    case AcessoActions.setMdProdu:
+    case AccesActions.setMdProdu:
       return { ...state, mdprodu: action.payload };
-    case AcessoActions.setNmProdu:
+    case AccesActions.setNmProdu:
       return { ...state, nmprodu: action.payload };
-    case AcessoActions.setMdAcaba:
+    case AccesActions.setMdAcaba:
       return { ...state, mdacaba: action.payload };
-    case AcessoActions.setNmAcaba:
+    case AccesActions.setNmAcaba:
       return { ...state, nmacaba: action.payload };
-    case AcessoActions.setMdExped:
+    case AccesActions.setMdExped:
       return { ...state, mdexped: action.payload };
-    case AcessoActions.setNmExped:
+    case AccesActions.setNmExped:
       return { ...state, nmexped: action.payload };
-    case AcessoActions.setMdAdmin:
+    case AccesActions.setMdAdmin:
       return { ...state, mdadmin: action.payload };
-    case AcessoActions.setNmAdmin:
+    case AccesActions.setNmAdmin:
       return { ...state, nmadmin: action.payload };
-    case AcessoActions.setMdMaster:
+    case AccesActions.setMdMaster:
       return { ...state, mdmaster: action.payload };
-    case AcessoActions.setNmMaster:
+    case AccesActions.setNmMaster:
       return { ...state, nmmaster: action.payload };
-    case AcessoActions.setMdConfig:
+    case AccesActions.setMdConfig:
       return { ...state, mdconfig: action.payload };
-    case AcessoActions.setNmConfig:
+    case AccesActions.setNmConfig:
       return { ...state, nmconfig: action.payload };
-    case AcessoActions.setPinAdm:
+    case AccesActions.setPinAdm:
       return { ...state, pinadm: action.payload };
-    case AcessoActions.setPathPage:
+    case AccesActions.setPathPage:
       return { ...state, pathpage: action.payload };
-    case AcessoActions.setLogado:
+    case AccesActions.setLogado:
       return { ...state, logado: action.payload };
-    case AcessoActions.setDtIni:
+    case AccesActions.setDtIni:
       return { ...state, datetimei: action.payload };
-    case AcessoActions.setDtFim:
+    case AccesActions.setDtFim:
       return { ...state, datetimef: action.payload };
-    case AcessoActions.setTmp:
+    case AccesActions.setTmp:
       return { ...state, tempo: action.payload };
     default:
       return state;
   }
 };
+
 // Context
-type AcessoContextType = {
-  state: StateAcesso;
-  dispatch: (action: AcessoAction) => void;
+type AccesContextType = {
+  state: StateAcces;
+  dispatch: (action: AccesAction) => void;
 };
-export const AcessoContext = createContext<AcessoContextType | undefined>(
+export const AccesContext = React.createContext<AccesContextType | undefined>(
   undefined
 );
 
 // Provider
-type AcessoProviderProps = {
+type AccesProviderProps = {
   children: React.ReactNode;
 };
-export const AcessoProvider = ({ children }: AcessoProviderProps) => {
-  const [state, dispatch] = useReducer(AcessoReducer, initialData);
+export const AccesProvider = ({ children }: AccesProviderProps) => {
+  const [state, dispatch] = React.useReducer(AccesReducer, initialData);
   const value = { state, dispatch };
   return (
-    <AcessoContext.Provider value={value}>{children}</AcessoContext.Provider>
+    <AccesContext.Provider value={value}>{children}</AccesContext.Provider>
   );
 };
 
 // Context Hook
-export const AcessoUseForm = () => {
-  const context = React.useContext(AcessoContext);
+export const AccesUseForm = () => {
+  const context = React.useContext(AccesContext);
   if (context === undefined) {
     throw new Error('"Useform" precisa ser usado dentro do Provider!');
   }
   return context;
 };
 
-export default AcessoContext;
+export default AccesContext;

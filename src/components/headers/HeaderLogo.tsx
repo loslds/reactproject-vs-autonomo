@@ -3,11 +3,11 @@ import LogoSys from "../../assets/pngs/logosys.png";
 import ContainerHeaderMain from "./ContainerHeaderMain";
 import ContainerItensHeaderMain from "./ContainerItensMain";
 import BarHeaderLogin from "./BarHearderLogin";
+//import { AcessoActions } from "../contexts/AcessoContext";
+import { AccesUseForm } from "../contexts/AccesContext";
+const HeaderLogo = () => {
+  const { state } = AccesUseForm();
 
-type PropsHeader = {
-  loginonoff?: boolean;
-};
-const HeaderLogo = ({ loginonoff }: PropsHeader) => {
   return (
     <ContainerHeaderMain>
       <ContainerItensHeaderMain>
@@ -22,7 +22,7 @@ const HeaderLogo = ({ loginonoff }: PropsHeader) => {
       </ContainerItensHeaderMain>
 
       <ContainerItensHeaderMain>
-        <BarHeaderLogin logado={loginonoff} />
+        <BarHeaderLogin logado={state.logado} />
       </ContainerItensHeaderMain>
     </ContainerHeaderMain>
   );

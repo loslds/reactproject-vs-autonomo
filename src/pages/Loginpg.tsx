@@ -5,13 +5,15 @@ import { useNavigate } from "react-router-dom";
 import * as L from "./stylespg";
 
 import { ThemeLogo } from "../components/themes";
-import { AcessoActions } from "../components/contexts/AcessoContext";
-import { AcessoUseForm } from "../components/contexts/AcessoContext";
+import {
+  AccesActions,
+  AccesUseForm,
+} from "../components/contexts/AccesContext";
 
 export const Loginpg = () => {
-  const [ispathpg, setIsPathPg] = React.useState("");
+  // const [ispathpg, setIsPathPg] = React.useState("");
 
-  const { state, dispatch } = AcessoUseForm();
+  const { state, dispatch } = AccesUseForm();
 
   const navigate = useNavigate();
 
@@ -22,49 +24,51 @@ export const Loginpg = () => {
   };
 
   React.useEffect(() => {
-    dispatch({ type: AcessoActions.setCurrentStep, payload: 0 });
-    dispatch({ type: AcessoActions.setIdAces, payload: 0 });
-    dispatch({ type: AcessoActions.setIdEmp, payload: 0 });
-    dispatch({ type: AcessoActions.setNmFant, payload: "" });
-    dispatch({ type: AcessoActions.setIdUser, payload: 0 });
-    dispatch({ type: AcessoActions.setIdNmUser, payload: "" });
-    dispatch({ type: AcessoActions.setPswUser, payload: "" });
-    dispatch({ type: AcessoActions.setPin, payload: "" });
-    dispatch({ type: AcessoActions.setMail, payload: "" });
-    dispatch({ type: AcessoActions.setFoneC, payload: "" });
-    dispatch({ type: AcessoActions.setNet, payload: "" });
-    dispatch({ type: AcessoActions.setIdMod, payload: 0 });
-    dispatch({ type: AcessoActions.setNmMod, payload: "" });
-    dispatch({ type: AcessoActions.setNmRecep, payload: "Recepção" });
-    dispatch({ type: AcessoActions.setMdRecep, payload: false });
-    dispatch({ type: AcessoActions.setNmDesig, payload: "Design" });
-    dispatch({ type: AcessoActions.setMdDesig, payload: false });
-    dispatch({ type: AcessoActions.setNmProdu, payload: "Produção" });
-    dispatch({ type: AcessoActions.setMdProdu, payload: false });
-    dispatch({ type: AcessoActions.setNmAcaba, payload: "Acabamento" });
-    dispatch({ type: AcessoActions.setMdAcaba, payload: false });
-    dispatch({ type: AcessoActions.setNmExped, payload: "Expedição" });
-    dispatch({ type: AcessoActions.setMdExped, payload: false });
-    dispatch({ type: AcessoActions.setNmAdmin, payload: "Administração" });
-    dispatch({ type: AcessoActions.setMdAdmin, payload: false });
-    dispatch({ type: AcessoActions.setNmMaster, payload: "Master" });
-    dispatch({ type: AcessoActions.setMdMaster, payload: false });
-    dispatch({ type: AcessoActions.setNmConfig, payload: "" });
-    dispatch({ type: AcessoActions.setMdConfig, payload: false });
-    dispatch({ type: AcessoActions.setPinAdm, payload: 9999 });
-    dispatch({ type: AcessoActions.setPathPage, payload: "" });
-    dispatch({ type: AcessoActions.setLogado, payload: false });
-    dispatch({ type: AcessoActions.setDtIni, payload: "" });
-    dispatch({ type: AcessoActions.setDtFim, payload: "" });
-    dispatch({ type: AcessoActions.setTmp, payload: "" });
+    dispatch({ type: AccesActions.setCurrentStep, payload: 0 });
+    dispatch({ type: AccesActions.setIdAces, payload: 0 });
+    dispatch({ type: AccesActions.setIdEmp, payload: 0 });
+    dispatch({ type: AccesActions.setNmFant, payload: "" });
+    dispatch({ type: AccesActions.setIdUser, payload: 0 });
+    dispatch({ type: AccesActions.setIdNmUser, payload: "" });
+    dispatch({ type: AccesActions.setPswUser, payload: "" });
+    dispatch({ type: AccesActions.setPin, payload: "" });
+    dispatch({ type: AccesActions.setMail, payload: "" });
+    dispatch({ type: AccesActions.setFoneC, payload: "" });
+    dispatch({ type: AccesActions.setNet, payload: "" });
+    dispatch({ type: AccesActions.setIdMod, payload: 0 });
+    dispatch({ type: AccesActions.setNmMod, payload: "" });
+    dispatch({ type: AccesActions.setNmRecep, payload: "Recepção" });
+    dispatch({ type: AccesActions.setMdRecep, payload: false });
+    dispatch({ type: AccesActions.setNmDesig, payload: "Design" });
+    dispatch({ type: AccesActions.setMdDesig, payload: false });
+    dispatch({ type: AccesActions.setNmProdu, payload: "Produção" });
+    dispatch({ type: AccesActions.setMdProdu, payload: false });
+    dispatch({ type: AccesActions.setNmAcaba, payload: "Acabamento" });
+    dispatch({ type: AccesActions.setMdAcaba, payload: false });
+    dispatch({ type: AccesActions.setNmExped, payload: "Expedição" });
+    dispatch({ type: AccesActions.setMdExped, payload: false });
+    dispatch({ type: AccesActions.setNmAdmin, payload: "Administração" });
+    dispatch({ type: AccesActions.setMdAdmin, payload: false });
+    dispatch({ type: AccesActions.setNmMaster, payload: "Master" });
+    dispatch({ type: AccesActions.setMdMaster, payload: false });
+    dispatch({ type: AccesActions.setNmConfig, payload: "" });
+    dispatch({ type: AccesActions.setMdConfig, payload: false });
+    dispatch({ type: AccesActions.setPinAdm, payload: 9999 });
+    dispatch({ type: AccesActions.setPathPage, payload: "" });
+    dispatch({ type: AccesActions.setLogado, payload: false });
+    dispatch({ type: AccesActions.setDtIni, payload: "" });
+    dispatch({ type: AccesActions.setDtFim, payload: "" });
+    dispatch({ type: AccesActions.setTmp, payload: "" });
   }, [dispatch]);
 
-  const handlerGetPath = () => {
-    console.log("IsPathPg", ispathpg);
-    setIsPathPg("/loginpg1");
-    dispatch({ type: AcessoActions.setPathPage, payload: ispathpg });
-    goto("/loginpg1");
-  };
+  // const handlerGetPath = () => {
+  //   setIsPathPg("/loginpg1");
+
+  //   console.log("IsPathPg", ispathpg);
+
+  //   dispatch({ type: AccesActions.setPathPage, payload: ispathpg });
+  //   goto("/loginpg1");
+  // };
 
   return (
     <ThemeLogo>
@@ -72,7 +76,7 @@ export const Loginpg = () => {
         <L.ContainerMenuPage>
           <h2>Bem Vindo...</h2>
           <h4>Abaixo você tera uma prévia da apresentação do Sistema.</h4>
-          <p>Step: {state.correntstep}/4.</p>
+          <p>Step: {state.currentstep}/4.</p>
         </L.ContainerMenuPage>
         <L.DivisionHPanel />
         <h3>Sintese :</h3>
@@ -129,7 +133,7 @@ export const Loginpg = () => {
           click sobre ele.
         </p>
         <br />
-        <button title={"Logar..."} onClick={handlerGetPath}>
+        <button title={"Logar..."} onClick={goto("/loginpg1")}>
           Logar
         </button>
       </L.Container>

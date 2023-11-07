@@ -2,15 +2,15 @@ import React from "react";
 import * as M from "../modal/stylesModal";
 
 import { useNavigate } from "react-router-dom";
-import { AcessoUseForm } from "../contexts/AcessoContext";
+import { AcessoUseForm } from "../contexts/AccesContext.tsx";
 
 import CardModalTexto from "../modal/CardModalTexto";
 
-import menu from '../../assets/svgs/menu.svg';
+import menu from "../../assets/svgs/menu.svg";
 
-import home from '../../assets/svgs/home.svg';
-import camera from '../../assets/svgs/camera2.svg';
-import chave from '../../assets/svgs/chave.svg';
+import home from "../../assets/svgs/home.svg";
+import camera from "../../assets/svgs/camera2.svg";
+import chave from "../../assets/svgs/chave.svg";
 
 import DivActionMenuModal from "../modal/DivActionMenuModal";
 

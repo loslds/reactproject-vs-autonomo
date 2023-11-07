@@ -10,6 +10,7 @@ import PageModal from "../modal/PageModal";
 import CardTxtQuemSouUser from "../modalhelp/CardTxtQuemSouUser";
 import CardAcessoSistema from "../modalhelp/CardAcessoSistema";
 
+import { AccesUseForm } from "../contexts/AccesContext";
 // import { useNavigate } from "react-router-dom";
 
 type PropsBarHLogin = {
@@ -25,7 +26,9 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
   //   };
   // };
 
-  const quemsou = "";
+  const { state } = AccesUseForm();
+
+  const quemsou = state.idnmuser;
   const [ismodalqsou, setIsModalQSou] = React.useState(false);
   const [ismodalnotlogin, setIsModalNotLogin] = React.useState(false);
 
@@ -51,7 +54,6 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
       )}
       {ismodalqsou ? (
         <PageModal
-          ispx={true}
           ptop={"25%"}
           pwidth={"50%"}
           pheight={"50%"}
@@ -63,7 +65,6 @@ const BarHearderLogin = ({ logado }: PropsBarHLogin) => {
       ) : null}
       {ismodalnotlogin ? (
         <PageModal
-          ispx={true}
           ptop={"25%"}
           pwidth={"50%"}
           pheight={"50%"}
