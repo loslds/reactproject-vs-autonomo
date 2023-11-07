@@ -19,9 +19,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Erropg from "./pages/Erropg.tsx";
 import { Loginpg } from "./pages/Loginpg.tsx";
-import { Loginpg1 } from "./pages/Loginpg1";
-import { Loginpg2 } from "./pages/Loginpg2";
-import { Loginpg3 } from "./pages/Loginpg3";
+import { Loginpg1 } from "./pages/Loginpg1.tsx";
+import { Loginpg2 } from "./pages/Loginpg2.tsx";
+import { Loginpg3 } from "./pages/Loginpg3.tsx";
+import { Loginpg4 } from "./pages/Loginpg4.tsx";
 
 import Recepcappg from "./pages/Recepcaopg";
 import Designpg from "./pages/Designpg";
@@ -37,9 +38,11 @@ export const router = createBrowserRouter([
     errorElement: <Erropg />,
     children: [
       { path: "/", element: <Loginpg /> },
-      { path: "/loginpg2", element: <Loginpg1 /> },
+      { path: "/loginpg", element: <Loginpg /> },
+      { path: "/loginpg1", element: <Loginpg1 /> },
       { path: "/loginpg2", element: <Loginpg2 /> },
       { path: "/loginpg3", element: <Loginpg3 /> },
+      { path: "/loginpg4", element: <Loginpg4 /> },
       { path: "/recepcappg", element: <Recepcappg /> },
       { path: "/designpg", element: <Designpg /> },
       { path: "/producaopg", element: <Producaopg /> },

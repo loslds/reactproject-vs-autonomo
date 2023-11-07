@@ -9,7 +9,6 @@ const CardDesemvolver = () => {
     <CardModalTexto>
       <M.ContainerHeardModalMain>
         <M.ContainerModalImg
-          ispx={true}
           pminheight={"60px"}
           pwidth={"80px"}
           img={negado}

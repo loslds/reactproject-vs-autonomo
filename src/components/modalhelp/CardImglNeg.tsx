@@ -8,12 +8,7 @@ const CardImgNeg = () => {
   return (
     <CardModalTexto>
       <M.ContainerHeardModalMain>
-        <M.ContainerModalImg
-          ispx={true}
-          pminheight={"60px"}
-          pwidth={"80px"}
-          img={negado}
-        />
+        <M.ContainerModalImg pminheight={"60px"} pwidth={"80px"} img={negado} />
       </M.ContainerHeardModalMain>
       <label>Acesso NEGADO.</label>
       <p>No momento seus requisitos não estão habilitados.</p>

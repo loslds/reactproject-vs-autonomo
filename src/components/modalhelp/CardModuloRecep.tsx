@@ -13,7 +13,6 @@ const CardModuloRecep = ({ isscroll }: PropsMDRecep) => {
       <M.ContentTextoModulos isscroll={isscroll}>
         <M.ContainerHeardModalMain>
           <M.ContainerModalImg
-            ispx={true}
             pminheight={"60px"}
             pwidth={"80px"}
             img={semimg}

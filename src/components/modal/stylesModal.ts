@@ -477,11 +477,12 @@ export const ContainerDivOpcTitle = styled.div`
 // Heard do Modal com Buttom Menu
 ///////////////////////////
 export const ContainerHeardImgMain = styled.div`
-  border: 3px silver solid ;
-  height: 100%;
-  width: 100%;
+  border: 1px solid;
+  border-color: #a2a29f;
+  //height: 100%;
+  max-width: 92.5%;
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
+  margin: 3px 0px 0px 0px;
   background-color: transparent; //* black;*/
   display: flex;
   flex-flow: wrap;
@@ -503,8 +504,8 @@ export const ContainerHeardModalMain = styled.div`
   align-content: center;
   align-items: center;
 `;
+
 type PropsModalModal = {
-  ispx?: boolean;
   ptop?: string;
   pminheight?: string;
   pwidth?: string;
@@ -512,7 +513,8 @@ type PropsModalModal = {
   onClick?: () => void;
 };
 export const ContentModalModal = styled.div<PropsModalModal>`
-  border: 1px red solid ;
+  border: 2px double ;
+  border-color: #ff0000;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
   min-height: ${({ pminheight }) => pminheight || '30%'};

@@ -1,12 +1,23 @@
+import React from "react";
+
 import * as L from "./stylespg";
 
 import { ThemeLogo } from "../components/themes/ThemeLogo";
 
-import  { AccesUseForm } from "../components/contexts/AccesContext";
+import {
+  AccesActions,
+  AccesUseForm,
+} from "../components/contexts/AccesContext";
 
 export const Loginpg1 = () => {
+  const { state, dispatch } = AccesUseForm();
 
-  const { state } = AccesUseForm();
+  React.useEffect(() => {
+    dispatch({
+      type: AccesActions.setCurrentStep,
+      payload: 1,
+    });
+  }, [dispatch]);
 
   return (
     <ThemeLogo>

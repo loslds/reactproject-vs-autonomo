@@ -2,7 +2,7 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
-import * as L from "./stylespg";
+import * as Pg from "./stylespg";
 
 import { ThemeLogo } from "../components/themes";
 import {
@@ -10,8 +10,14 @@ import {
   AccesUseForm,
 } from "../components/contexts/AccesContext";
 
+import profile from "../assets/svgs/profile.svg";
+//import protection from "../assets/svgs/protection.svg";
+
+import BarMainButtonsLeftPg from "./BarMainButtonsLeftPg";
+
 export const Loginpg = () => {
-  // const [ispathpg, setIsPathPg] = React.useState("");
+  const [ispathpg, setIsPathPg] = React.useState(false);
+  const [strpathpg, setStrPathPg] = React.useState("");
 
   const { state, dispatch } = AccesUseForm();
 
@@ -29,7 +35,7 @@ export const Loginpg = () => {
     dispatch({ type: AccesActions.setIdEmp, payload: 0 });
     dispatch({ type: AccesActions.setNmFant, payload: "" });
     dispatch({ type: AccesActions.setIdUser, payload: 0 });
-    dispatch({ type: AccesActions.setIdNmUser, payload: "" });
+    dispatch({ type: AccesActions.setIdNmUser, payload: "Oswaldo" });
     dispatch({ type: AccesActions.setPswUser, payload: "" });
     dispatch({ type: AccesActions.setPin, payload: "" });
     dispatch({ type: AccesActions.setMail, payload: "" });
@@ -55,30 +61,35 @@ export const Loginpg = () => {
     dispatch({ type: AccesActions.setMdConfig, payload: false });
     dispatch({ type: AccesActions.setPinAdm, payload: 9999 });
     dispatch({ type: AccesActions.setPathPage, payload: "" });
-    dispatch({ type: AccesActions.setLogado, payload: false });
+    dispatch({ type: AccesActions.setLogado, payload: true });
     dispatch({ type: AccesActions.setDtIni, payload: "" });
     dispatch({ type: AccesActions.setDtFim, payload: "" });
     dispatch({ type: AccesActions.setTmp, payload: "" });
   }, [dispatch]);
 
-  // const handlerGetPath = () => {
-  //   setIsPathPg("/loginpg1");
+  const handlerGetPath = () => {
+    setIsPathPg(true);
+    dispatch({ type: AccesActions.setPathPage, payload: strpathpg });
+  };
 
-  //   console.log("IsPathPg", ispathpg);
+  React.useEffect(() => {
+    setStrPathPg("/loginpg1");
+    goto(strpathpg);
+  }, [strpathpg]);
 
-  //   dispatch({ type: AccesActions.setPathPage, payload: ispathpg });
-  //   goto("/loginpg1");
-  // };
+  console.log("idnmuser", state.idnmuser);
+  console.log("ispathpg", ispathpg);
+  console.log("strpathpg", strpathpg);
 
   return (
     <ThemeLogo>
-      <L.Container>
-        <L.ContainerMenuPage>
+      <Pg.Container>
+        <Pg.ContainerMenuPage>
           <h2>Bem Vindo...</h2>
           <h4>Abaixo você tera uma prévia da apresentação do Sistema.</h4>
           <p>Step: {state.currentstep}/4.</p>
-        </L.ContainerMenuPage>
-        <L.DivisionHPanel />
+        </Pg.ContainerMenuPage>
+        <Pg.DivisionHPanel />
         <h3>Sintese :</h3>
         <br />
         <p>
@@ -133,10 +144,21 @@ export const Loginpg = () => {
           click sobre ele.
         </p>
         <br />
-        <button title={"Logar..."} onClick={goto("/loginpg1")}>
-          Logar
-        </button>
-      </L.Container>
+        <BarMainButtonsLeftPg>
+          <Pg.ContainerButtonsPage>
+            <Pg.DivLabelPg bd_color={""}>
+              <Pg.ContainerPgLabelRigth>
+                <label>Logar...</label>
+                <Pg.ButtonPg
+                  img={profile}
+                  title={"Iniciar..."}
+                  onClick={handlerGetPath}
+                />
+              </Pg.ContainerPgLabelRigth>
+            </Pg.DivLabelPg>
+          </Pg.ContainerButtonsPage>
+        </BarMainButtonsLeftPg>
+      </Pg.Container>
     </ThemeLogo>
   );
 };
