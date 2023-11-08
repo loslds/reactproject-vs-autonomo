@@ -139,7 +139,7 @@ export const ContainerPanelLeft = styled.div`
   label {
     padding: 0px 10px 0px 10px;
     width: 100%;
-    font-size: 18px;
+    //font-size: 18px;
     font-family: normal;
   }
 

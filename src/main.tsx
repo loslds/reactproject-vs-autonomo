@@ -17,12 +17,12 @@ import { AccesProvider } from "./components/contexts/AccesContext";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Erropg from "./pages/Erropg.tsx";
-import { Loginpg } from "./pages/Loginpg.tsx";
-import { Loginpg1 } from "./pages/Loginpg1.tsx";
-import { Loginpg2 } from "./pages/Loginpg2.tsx";
-import { Loginpg3 } from "./pages/Loginpg3.tsx";
-import { Loginpg4 } from "./pages/Loginpg4.tsx";
+import Erropg from "./pages/Erropg";
+import { Loginpg } from "./pages/Loginpg";
+import { Loginpg1 } from "./pages/Loginpg1";
+import { Loginpg2 } from "./pages/Loginpg2";
+import { Loginpg3 } from "./pages/Loginpg3";
+import { Loginpg4 } from "./pages/Loginpg4";
 
 import Recepcappg from "./pages/Recepcaopg";
 import Designpg from "./pages/Designpg";
@@ -37,7 +37,6 @@ export const router = createBrowserRouter([
     element: <Loginpg />,
     errorElement: <Erropg />,
     children: [
-      { path: "/", element: <Loginpg /> },
       { path: "/loginpg", element: <Loginpg /> },
       { path: "/loginpg1", element: <Loginpg1 /> },
       { path: "/loginpg2", element: <Loginpg2 /> },
@@ -49,7 +48,7 @@ export const router = createBrowserRouter([
       { path: "/acabamentopg", element: <Acabamentopg /> },
       { path: "/expedicaopg", element: <Expedicaopg /> },
       { path: "/administracaog", element: <Administracaopg /> },
-    ],
+    ]
   },
 ]);
 

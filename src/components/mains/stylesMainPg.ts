@@ -170,10 +170,10 @@ export const ContainerMainImgItem = styled.div`
   line-height: 16px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
-  label {
+  /* label {
     font-size: 18px;
     line-height: 20px;
-  }
+  } */
 `;
 //** fim componete MainImgItem */
 ///////////////////////////////////////////////

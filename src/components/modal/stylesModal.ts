@@ -417,7 +417,7 @@ export const ContentDivOpc = styled.div`
     color: #ffffff;
     line-height: 20px;
     font-weight: bold;
-    font-size: 18x;
+    //font-size: 18x;
   }
 `;
 

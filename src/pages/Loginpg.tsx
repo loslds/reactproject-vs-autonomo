@@ -10,8 +10,8 @@ import {
   AccesUseForm,
 } from "../components/contexts/AccesContext";
 
-import profile from "../assets/svgs/profile.svg";
-//import protection from "../assets/svgs/protection.svg";
+//import profile from "../assets/svgs/profile.svg";
+import protection from "../assets/svgs/protection.svg";
 
 import BarMainButtonsLeftPg from "./BarMainButtonsLeftPg";
 
@@ -72,10 +72,15 @@ export const Loginpg = () => {
     dispatch({ type: AccesActions.setPathPage, payload: strpathpg });
   };
 
-  React.useEffect(() => {
+  React.useMemo(() => {
     setStrPathPg("/loginpg1");
     goto(strpathpg);
   }, [strpathpg]);
+
+  // React.useEffect(() => {
+  //   setStrPathPg("/loginpg1");
+  //   goto(strpathpg);
+  // }, [strpathpg]);
 
   console.log("idnmuser", state.idnmuser);
   console.log("ispathpg", ispathpg);
@@ -144,15 +149,17 @@ export const Loginpg = () => {
           click sobre ele.
         </p>
         <br />
+
         <BarMainButtonsLeftPg>
           <Pg.ContainerButtonsPage>
-            <Pg.DivLabelPg bd_color={""}>
+            <Pg.DivLabelPg>
               <Pg.ContainerPgLabelRigth>
                 <label>Logar...</label>
                 <Pg.ButtonPg
-                  img={profile}
+                  img={protection}
                   title={"Iniciar..."}
-                  onClick={handlerGetPath}
+                  onKeyDown={handlerGetPath}
+                  onClick={goto(strpathpg)}
                 />
               </Pg.ContainerPgLabelRigth>
             </Pg.DivLabelPg>

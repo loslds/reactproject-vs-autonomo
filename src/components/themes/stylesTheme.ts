@@ -89,11 +89,10 @@ export const ContainerLogoMain = styled.div`
   }
   label {
     padding: 0px 10px 0px 10px;
-    /* color: #b8b8d4; */
-    //color: #ffffff;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 18x;
     line-height: 20px;
     font-weight: bold;
-    font-size: 18x;
   }
   /* button {
     border: 3px double;
@@ -113,11 +112,11 @@ export const ContainerLogo = styled.div`
  `;
 //////////////////////////////////////////////////////
 // div de divisão de painel do theme
-export const DivisionHPanel = styled.div`
+export const DivisionHPanel = styled.div<{pxheigt? : string}>`
   border: 0px;
   padding: 1px 1px 1px 1px;
   margin: 1px 1px 1px 1px;
-  height: 1px;
+  height: ${props => (props.pxheigt ? 'pxheigt' : '1px')};
   width: 99%;
   display: flex;
   background-color: #7f7fbb;

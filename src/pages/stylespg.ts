@@ -20,16 +20,15 @@ export const ContainerMenuPage = styled.div`
 `;
 //////////////////////////////////////////////////////
 // div de divisão de painel do theme
-export const DivisionHPanel = styled.div`
+export const DivisionHPanel = styled.div<{pxheigt? : string}>`
   border: 0px;
   padding: 1px 1px 1px 1px;
   margin: 1px 1px 1px 1px;
-  height: 1px;
-  width: 99%;
+  height: ${props => (props.pxheigt ? 'pxheigt' : '1px')};
+  width: 99.5%;
   display: flex;
   background-color: #7f7fbb;
 `;
-
 /////////////////////////////////////////////
 /** botão da Pagina */
 export const ContainerButtonImgBg = styled.div`
@@ -47,7 +46,7 @@ export const ContainerButtonImgBg = styled.div`
   color: white;
 `;
 
-export const ButtonsImgBg = styled.button<{ img?: string }>`
+export const ButtonsImgPg = styled.button<{ img?: string }>`
   border: 0;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;

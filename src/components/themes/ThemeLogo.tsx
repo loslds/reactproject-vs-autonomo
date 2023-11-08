@@ -13,15 +13,17 @@ export const ThemeLogo = ({ children }: PropsThemeLogo) => {
       <L.ContainerLogoMainFlex>
         <HeaderLogo />
 
-        <L.DivisionHPanel />
-        {/* container step */}
-        <BarSideMenu />
-
-        <L.DivisionHPanel />
+        <L.DivisionHPanel pxheigt="3px" />
 
         {/* container page */}
-        <L.ContainerPage>{children}</L.ContainerPage>
+        <L.ContainerPage>
+          {/* container step */}
+          <BarSideMenu />
 
+          <L.DivisionHPanel />
+
+          {children}
+        </L.ContainerPage>
         <L.DivisionHPanel />
 
         {/* container foot */}

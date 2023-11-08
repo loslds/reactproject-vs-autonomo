@@ -56,14 +56,14 @@ export const BarContainerHRigth = styled.div`
   justify-content: right;
   align-items: center;
   align-content: center;
-  label {
-    padding: 0px 0px 0px 0px;
-    margin: 3px 0px 3px 0px;
-    font-style: normal;
+  /* label {
+    //padding: 0px 0px 0px 0px;
+    //margin: 3px 0px 3px 0px;
+    //font-style: normal;
     font-family: Verdana, Tahoma, sans-serif;
-    font-weight: bold;
+    //font-weight: bold;
     color: #ffffff;
-  }
+  } */
 `;
 export const ButtonHLogin = styled.button<{ img?: string }>`
   border: 0px;

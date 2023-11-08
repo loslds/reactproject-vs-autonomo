@@ -14,9 +14,7 @@ module.exports = {
   "ignorePatterns": ["dist", ".eslintrc.cjs"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
+    "ecmaFeatures": {"jsx": true },
     //"ecmaVersion": "latest",
     "sourceType": "module"
   },
